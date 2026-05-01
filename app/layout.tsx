@@ -5,7 +5,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'open-crm — CRM you actually own',
   description:
-    'Open source CRM for service companies. Self-hosted, MIT licensed. Installation, customization and support by Hedberh AB.',
+    'Open source CRM for service companies. Self-hosted, MIT licensed.',
   metadataBase: new URL('https://open-crm.org'),
   openGraph: {
     title: 'open-crm — CRM you actually own',

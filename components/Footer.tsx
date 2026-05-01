@@ -51,9 +51,6 @@ export function Footer() {
             </FooterCol>
 
             <FooterCol title={t('company')}>
-              <FooterLink href="https://hedberh.se" external>
-                {t('about')}
-              </FooterLink>
               <FooterLink href="mailto:hello@open-crm.org">
                 {t('contact')}
               </FooterLink>
@@ -64,8 +61,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-3 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-xs text-subtle">{t('rights')}</p>
+        <div className="mt-14 flex border-t border-border pt-6 sm:items-center sm:justify-end">
           <p className="font-mono text-[11px] text-subtle">
             {t('license_short')}
           </p>
