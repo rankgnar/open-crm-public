@@ -7,7 +7,7 @@ export function FinalCTA() {
   return (
     <section
       id="cta"
-      className="relative overflow-hidden border-t border-border py-28 md:py-36"
+      className="relative overflow-hidden border-t border-border py-16 md:py-36"
     >
       {/* Glow */}
       <div
@@ -18,7 +18,7 @@ export function FinalCTA() {
 
       <div className="container-x relative text-center">
         <div className="mx-auto max-w-3xl">
-          <h2 className="text-balance text-4xl font-semibold leading-[1.05] tracking-tightest text-fg-strong sm:text-5xl md:text-[64px]">
+          <h2 className="text-balance text-[28px] font-semibold leading-[1.05] tracking-tightest text-fg-strong sm:text-4xl md:text-5xl lg:text-[64px]">
             <span className="accent-gradient">{t('title')}</span>
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-base text-muted text-balance sm:text-lg">
@@ -26,7 +26,7 @@ export function FinalCTA() {
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <a href="mailto:hello@open-crm.org" className="btn btn-primary !h-12 !px-7 !text-base">
+            <a href="mailto:hello@open-crm.org" className="btn btn-primary w-full !h-12 !px-7 !text-base sm:w-auto">
               <Calendar size={16} />
               {t('cta')}
               <ArrowRight size={16} />

@@ -20,7 +20,7 @@ export function Hero() {
   }
 
   return (
-    <section className="relative overflow-hidden pt-24 pb-20 md:pt-40 md:pb-32">
+    <section className="relative overflow-hidden pt-16 pb-12 md:pt-40 md:pb-32">
       {/* Background layers */}
       <div className="absolute inset-0 grid-bg mask-fade-b opacity-60" />
       <div
@@ -38,7 +38,7 @@ export function Hero() {
             </div>
 
             <h1
-              className="mt-5 text-[40px] font-semibold leading-[1.05] tracking-tightest text-balance sm:text-[56px] md:text-[64px] lg:text-[68px] animate-fade-up"
+              className="mt-5 text-[28px] font-semibold leading-[1.05] tracking-tightest text-balance sm:text-[40px] md:text-[56px] lg:text-[68px] animate-fade-up"
               style={{ animationDelay: '60ms' }}
             >
               <span className="headline-gradient block">{t('titleLine1')}</span>
@@ -58,7 +58,7 @@ export function Hero() {
               style={{ animationDelay: '180ms' }}
             >
               <span className="font-mono text-sm text-subtle select-none">$</span>
-              <code className="flex-1 truncate font-mono text-[13px] text-fg-strong">
+              <code className="flex-1 overflow-x-auto whitespace-nowrap font-mono text-[13px] text-fg-strong [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                 {command}
               </code>
               <button
@@ -76,10 +76,10 @@ export function Hero() {
 
             {/* CTAs */}
             <div
-              className="mt-7 flex flex-wrap items-center gap-3 animate-fade-up"
+              className="mt-7 flex flex-col gap-3 animate-fade-up sm:flex-row sm:flex-wrap sm:items-center"
               style={{ animationDelay: '240ms' }}
             >
-              <a href="#services" className="btn btn-primary">
+              <a href="#services" className="btn btn-primary w-full sm:w-auto">
                 {t('ctaPrimary')}
                 <ArrowRight size={15} />
               </a>
@@ -87,7 +87,7 @@ export function Hero() {
                 href={GITHUB_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-ghost"
+                className="btn btn-ghost w-full sm:w-auto"
               >
                 <Github size={15} />
                 {t('ctaSecondary')}

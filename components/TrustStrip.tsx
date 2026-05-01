@@ -13,8 +13,8 @@ export function TrustStrip() {
 
   return (
     <section className="relative border-y border-border bg-surface/30">
-      <div className="container-x py-10">
-        <div className="grid grid-cols-2 gap-x-6 gap-y-6 md:grid-cols-4">
+      <div className="container-x py-8 md:py-10">
+        <div className="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-5 sm:gap-y-5 md:grid-cols-4 md:gap-x-6 md:gap-y-6">
           {items.map((item) => {
             const Icon = item.icon
             return (

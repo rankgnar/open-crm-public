@@ -44,7 +44,7 @@ export function WorkflowsSection() {
   return (
     <section
       id="workflows"
-      className="relative scroll-mt-24 overflow-hidden border-y border-border bg-surface/20 py-24 md:py-32"
+      className="relative scroll-mt-24 overflow-hidden border-y border-border bg-surface/20 py-16 md:py-32"
     >
       <div
         aria-hidden
@@ -56,7 +56,7 @@ export function WorkflowsSection() {
           {/* Left: copy + features */}
           <div className="lg:col-span-5">
             <p className="eyebrow">{t('label')}</p>
-            <h2 className="mt-5 text-balance text-3xl font-semibold leading-[1.1] tracking-tight text-fg-strong sm:text-4xl md:text-[44px]">
+            <h2 className="mt-5 text-balance text-[26px] font-semibold leading-[1.1] tracking-tight text-fg-strong sm:text-4xl md:text-[44px]">
               <span className="headline-gradient">{t('title')}</span>
             </h2>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-muted text-balance sm:text-lg">

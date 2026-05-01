@@ -43,12 +43,12 @@ export function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative scroll-mt-24 border-t border-border py-24 md:py-32"
+      className="relative scroll-mt-24 border-t border-border py-16 md:py-32"
     >
       <div className="container-x">
         <header className="mx-auto max-w-2xl text-center">
           <p className="eyebrow justify-center">{t('label')}</p>
-          <h2 className="mt-5 text-balance text-3xl font-semibold tracking-tight text-fg-strong sm:text-4xl md:text-5xl">
+          <h2 className="mt-5 text-balance text-[26px] font-semibold tracking-tight text-fg-strong sm:text-4xl md:text-5xl">
             <span className="headline-gradient">{t('title')}</span>
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-base text-muted text-balance">
@@ -62,7 +62,7 @@ export function ServicesSection() {
             return (
               <div
                 key={tier.key}
-                className={`relative flex flex-col rounded-2xl border p-7 transition-all duration-300 ${
+                className={`relative flex flex-col rounded-2xl border p-5 transition-all duration-300 md:p-7 ${
                   tier.popular
                     ? 'border-accent/40 bg-gradient-to-b from-accent/5 to-transparent shadow-2xl shadow-accent/5'
                     : 'border-border bg-bg-elevated hover:border-border-strong'
@@ -96,7 +96,7 @@ export function ServicesSection() {
                   </p>
                 </div>
 
-                <ul className="mt-6 space-y-3">
+                <ul className="mt-5 space-y-2.5 md:mt-6 md:space-y-3">
                   {tier.includeKeys.map((k) => (
                     <li key={k} className="flex items-start gap-2.5 text-sm">
                       <Check
@@ -111,7 +111,7 @@ export function ServicesSection() {
 
                 <a
                   href="mailto:hello@open-crm.org"
-                  className={`mt-8 ${
+                  className={`mt-8 w-full ${
                     tier.popular ? 'btn btn-primary' : 'btn btn-ghost'
                   }`}
                 >

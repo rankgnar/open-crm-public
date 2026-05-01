@@ -87,11 +87,11 @@ export function ModulesGrid() {
   const t = useTranslations('modules')
 
   return (
-    <section id="modules" className="relative scroll-mt-24 py-24 md:py-32">
+    <section id="modules" className="relative scroll-mt-24 py-16 md:py-32">
       <div className="container-x">
         <header className="mx-auto max-w-2xl text-center">
           <p className="eyebrow justify-center">{t('label')}</p>
-          <h2 className="mt-5 text-balance text-3xl font-semibold tracking-tight text-fg-strong sm:text-4xl md:text-5xl">
+          <h2 className="mt-5 text-balance text-[26px] font-semibold tracking-tight text-fg-strong sm:text-4xl md:text-5xl">
             <span className="headline-gradient">{t('title')}</span>
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-base text-muted text-balance">
@@ -99,7 +99,7 @@ export function ModulesGrid() {
           </p>
         </header>
 
-        <div className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-12">
+        <div className="mt-12 grid grid-cols-1 gap-3 md:mt-16 md:grid-cols-2 md:gap-4 lg:grid-cols-12">
           {MODULES.map((mod) => (
             <ModuleCard
               key={mod.key}
@@ -134,7 +134,7 @@ function ModuleCard({
 }) {
   return (
     <div
-      className={`card card-glow group relative flex h-full min-h-[220px] flex-col p-6 ${span}`}
+      className={`card card-glow group relative flex h-full min-h-[180px] flex-col p-5 md:min-h-[220px] md:p-6 ${span}`}
     >
       <div className="mb-5 flex items-start justify-between">
         <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-border-strong bg-surface text-accent-soft transition group-hover:border-accent/40 group-hover:bg-accent/5">

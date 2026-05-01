@@ -66,12 +66,12 @@ export function StackSection() {
   return (
     <section
       id="stack"
-      className="relative scroll-mt-24 border-y border-border bg-surface/20 py-24 md:py-32"
+      className="relative scroll-mt-24 border-y border-border bg-surface/20 py-16 md:py-32"
     >
       <div className="container-x">
         <header className="mx-auto max-w-2xl text-center">
           <p className="eyebrow justify-center">{t('label')}</p>
-          <h2 className="mt-5 text-balance text-3xl font-semibold tracking-tight text-fg-strong sm:text-4xl md:text-5xl">
+          <h2 className="mt-5 text-balance text-[26px] font-semibold tracking-tight text-fg-strong sm:text-4xl md:text-5xl">
             <span className="headline-gradient">{t('title')}</span>
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-base text-muted text-balance">
@@ -79,13 +79,13 @@ export function StackSection() {
           </p>
         </header>
 
-        <div className="mt-14 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
+        <div className="mt-14 grid grid-cols-2 gap-2.5 md:grid-cols-3 md:gap-3 lg:grid-cols-6">
           {STACK.map((s) => {
             const Icon = s.icon
             return (
               <div
                 key={s.name}
-                className="card group flex flex-col items-center gap-2.5 p-5 text-center"
+                className="card group flex flex-col items-center gap-2.5 p-4 text-center md:p-5"
               >
                 <div className={`mb-1 ${s.color}`}>
                   <Icon size={22} strokeWidth={1.5} />

@@ -42,7 +42,7 @@ export function LiveDemo() {
   const [active, setActive] = useState<ActiveSection>('kunder')
 
   return (
-    <section id="preview" className="relative scroll-mt-24 py-24 md:py-32">
+    <section id="preview" className="relative scroll-mt-24 py-16 md:py-32">
       <div
         aria-hidden
         className="absolute left-1/2 top-0 h-[600px] w-[1100px] -translate-x-1/2 bg-[radial-gradient(ellipse_50%_50%_at_50%_0%,rgba(52,211,153,0.10),transparent_70%)]"
@@ -51,7 +51,7 @@ export function LiveDemo() {
       <div className="container-x relative">
         <header className="mx-auto max-w-2xl text-center">
           <p className="eyebrow justify-center">{t('label')}</p>
-          <h2 className="mt-5 text-balance text-3xl font-semibold tracking-tight text-fg-strong sm:text-4xl md:text-5xl">
+          <h2 className="mt-5 text-balance text-[26px] font-semibold tracking-tight text-fg-strong sm:text-4xl md:text-5xl">
             <span className="headline-gradient">{t('title')}</span>
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-base text-muted text-balance">
@@ -70,7 +70,7 @@ export function LiveDemo() {
                   <button
                     key={tab.key}
                     onClick={() => setActive(tab.key)}
-                    className={`inline-flex shrink-0 items-center gap-2 rounded-lg px-3.5 py-2 text-sm font-medium transition-all ${
+                    className={`inline-flex shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium transition-all md:px-3.5 md:text-sm ${
                       isActive
                         ? 'bg-bg-elevated text-fg-strong shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]'
                         : 'text-muted hover:text-fg'
@@ -107,8 +107,10 @@ export function LiveDemo() {
           </div>
         </div>
 
-        <p className="mx-auto mt-8 max-w-xl text-center text-xs text-subtle">
-          {t('hint')}
+        <p className="mx-auto mt-8 flex max-w-xl items-center justify-center gap-2 text-center text-xs text-subtle">
+          <span aria-hidden className="sm:hidden">←</span>
+          <span>{t('hint')}</span>
+          <span aria-hidden className="sm:hidden">→</span>
         </p>
       </div>
     </section>
