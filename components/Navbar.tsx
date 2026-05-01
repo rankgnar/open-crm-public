@@ -1,0 +1,117 @@
+'use client'
+
+import { useEffect, useState } from 'react'
+import { Github, Menu, X } from 'lucide-react'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/lib/i18n/navigation'
+import { Logo } from './Logo'
+import { LanguageSwitcher } from './LanguageSwitcher'
+
+const GITHUB_URL = 'https://github.com/rankgnar/open-crm-public'
+
+export function Navbar() {
+  const t = useTranslations('nav')
+  const [scrolled, setScrolled] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  const links = [
+    { href: '#modules', label: t('modules') },
+    { href: '#workflows', label: t('workflows') },
+    { href: '#stack', label: t('stack') },
+    { href: '#services', label: t('services') },
+  ]
+
+  return (
+    <header
+      className={`fixed inset-x-0 top-0 z-40 transition-all duration-300 ${
+        scrolled
+          ? 'border-b border-border bg-bg/80 backdrop-blur-xl'
+          : 'border-b border-transparent'
+      }`}
+    >
+      <div className="container-x flex h-16 items-center justify-between">
+        <Link href="/" className="shrink-0">
+          <Logo />
+        </Link>
+
+        <nav className="hidden items-center gap-7 md:flex">
+          {links.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              className="text-sm text-muted transition hover:text-fg"
+            >
+              {l.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="hidden items-center gap-3 md:flex">
+          <LanguageSwitcher />
+          <a
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-9 items-center gap-1.5 rounded-md border border-border-strong bg-bg-elevated/40 px-3 text-sm text-muted transition hover:border-faint hover:text-fg"
+          >
+            <Github size={14} />
+            <span>{t('github')}</span>
+          </a>
+          <a href="#services" className="btn btn-primary !h-9 !text-sm">
+            {t('book')}
+          </a>
+        </div>
+
+        <button
+          className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border-strong text-muted md:hidden"
+          onClick={() => setMobileOpen((v) => !v)}
+          aria-label="Toggle menu"
+        >
+          {mobileOpen ? <X size={16} /> : <Menu size={16} />}
+        </button>
+      </div>
+
+      {mobileOpen && (
+        <div className="border-t border-border bg-bg/95 backdrop-blur-xl md:hidden">
+          <div className="container-x flex flex-col gap-1 py-3">
+            {links.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={() => setMobileOpen(false)}
+                className="rounded-md px-3 py-2.5 text-sm text-fg hover:bg-hover"
+              >
+                {l.label}
+              </a>
+            ))}
+            <div className="mt-2 flex items-center gap-2 border-t border-border pt-3">
+              <LanguageSwitcher />
+              <a
+                href={GITHUB_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-9 items-center gap-1.5 rounded-md border border-border-strong px-3 text-sm text-muted"
+              >
+                <Github size={14} /> {t('github')}
+              </a>
+              <a
+                href="#services"
+                onClick={() => setMobileOpen(false)}
+                className="btn btn-primary !h-9 !text-sm flex-1"
+              >
+                {t('book')}
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+    </header>
+  )
+}

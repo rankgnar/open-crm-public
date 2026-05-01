@@ -1,0 +1,215 @@
+{
+  "nav": {
+    "modules": "Módulos",
+    "workflows": "Workflows",
+    "stack": "Stack",
+    "services": "Servicios",
+    "github": "GitHub",
+    "book": "Reservar llamada"
+  },
+  "hero": {
+    "badge": "Open source · Licencia MIT",
+    "titleLine1": "Tu CRM.",
+    "titleLine2": "De verdad tuyo.",
+    "sub": "Gestión completa de clientes y proyectos para empresas de servicios. Constrúyelo, posée el código, adáptalo. Te ayudamos a hacerlo tuyo.",
+    "ctaPrimary": "Reservar instalación",
+    "ctaSecondary": "Ver en GitHub",
+    "command": "git clone https://github.com/rankgnar/open-crm-public",
+    "mockTitle": "open-crm.app",
+    "mockKunder": "Clientes",
+    "mockProjekt": "Proyectos",
+    "mockOffert": "Presupuestos",
+    "mockEkonomi": "Economía",
+    "mockActive": "Proyecto activo",
+    "mockClient": "Karlsson Bygg AB",
+    "mockStatus": "En curso · 7 de 12 fases completadas",
+    "mockBudget": "Presupuesto",
+    "mockSpent": "Consumido"
+  },
+  "trust": {
+    "title": "Construido sobre lo que no se rompe",
+    "items": {
+      "self": "Self-hosted",
+      "selfDesc": "Tus datos, tu servidor",
+      "noLockIn": "Sin lock-in",
+      "noLockInDesc": "Exporta cuando quieras",
+      "swedish": "Hecho en Suecia",
+      "swedishDesc": "ROT, F-skatt, Fortnox",
+      "mit": "Licencia MIT",
+      "mitDesc": "Forkea y úsalo"
+    }
+  },
+  "preview": {
+    "label": "En vivo en la app",
+    "title": "Esto no es un mockup. Es la app.",
+    "sub": "Cambia entre vistas. Ordena, filtra, cambia estado. Esto es open-crm — de verdad — con datos ficticios.",
+    "hint": "Todo lo que clicas es código real. Sin vídeo, sin imagen — el componente renderiza en vivo.",
+    "tabs": {
+      "kunder": "Clientes",
+      "projekt": "Proyectos",
+      "forslag": "Presupuestos",
+      "workflows": "Workflows",
+      "kalender": "Calendario",
+      "ekonomi": "Economía",
+      "personal": "Personal",
+      "chat": "Chat"
+    }
+  },
+  "workflows": {
+    "label": "Workflows · IA",
+    "title": "Construye tu propia automatización. Sin código.",
+    "sub": "Editor visual de nodos con triggers, nodos de IA y acciones. Conecta Claude, OpenAI, Mistral o tus propios modelos. Todo corre en local contra tu Postgres.",
+    "tagline": "Tú tienes los flujos. Tú tienes el contexto.",
+    "cta": "Ver un workflow en vivo",
+    "features": {
+      "0": {
+        "title": "Editor visual de nodos",
+        "desc": "Triggers, condiciones, IA, PDF, email, base de datos. Drag-and-drop. Versionado en Git."
+      },
+      "1": {
+        "title": "Multi-LLM",
+        "desc": "Claude, OpenAI, Gemini, Mistral. Tu API key, tus modelos. Tú decides."
+      },
+      "2": {
+        "title": "Cron y triggers",
+        "desc": "Horarios, cambios de estado, subidas de documentos, email entrante. Todo puede arrancar un flujo."
+      },
+      "3": {
+        "title": "Contexto de proyecto",
+        "desc": "Los nodos de IA reciben acceso automático a cliente, proyecto, documentos y decisiones previas."
+      }
+    }
+  },
+  "integrations": {
+    "label": "Integraciones listas · y construimos más si las necesitas"
+  },
+  "modules": {
+    "label": "Módulos",
+    "title": "Todo lo que un cliente necesita. Nada más.",
+    "sub": "Ocho módulos. Un flujo natural. Del primer contacto a la factura cobrada.",
+    "kunder": {
+      "title": "Clientes",
+      "desc": "Personas, empresas, contactos. Con historial y notas."
+    },
+    "projekt": {
+      "title": "Proyectos",
+      "desc": "Vinculados a un cliente. Con estado, fases, documentos y presupuesto."
+    },
+    "schema": {
+      "title": "Planificación",
+      "desc": "Tareas, visitas, entregas y reuniones en un calendario común."
+    },
+    "arbete": {
+      "title": "Mano de obra",
+      "desc": "Horas × tarifa. Deducción ROT por defecto. Por fase, por trabajador."
+    },
+    "material": {
+      "title": "Materiales",
+      "desc": "Cantidad × precio unitario. Agrupado por fase. Margen en tiempo real."
+    },
+    "offert": {
+      "title": "Presupuesto",
+      "desc": "Consolida obra + materiales. Un PDF que sí querrás enviar."
+    },
+    "ekonomi": {
+      "title": "Economía",
+      "desc": "Coste real frente a presupuesto. Por proyecto y total."
+    },
+    "fakturor": {
+      "title": "Facturas",
+      "desc": "Enviadas, pendientes, vencidas, cobradas. Sincronizado con Fortnox."
+    }
+  },
+  "stack": {
+    "label": "Stack",
+    "title": "Sin APIs cerradas. Sin cajas negras.",
+    "sub": "Herramientas probadas. Todo el código visible. Todos los datos tuyos.",
+    "items": {
+      "electron": "Nativo en tu máquina",
+      "react": "Interfaz moderna",
+      "supabase": "Postgres que tú posées",
+      "ts": "Type-safe de punta a punta",
+      "tailwind": "Diseño consistente",
+      "github": "Versionado en abierto"
+    }
+  },
+  "why": {
+    "label": "Filosofía",
+    "title": "Deja de alquilar. Empieza a poseer.",
+    "p1": "El sector vende suscripciones que retienen tus datos como rehén. El día que dejas de pagar, todo desaparece — contactos, proyectos, facturas, presupuestos, historial de correo.",
+    "p2": "open-crm es distinto. El código es público bajo MIT. La base de datos es tuya. El servidor es tuyo. Si mañana cerramos, puedes seguir usando el sistema diez años más — sin nosotros.",
+    "p3": "Cobramos por el valor. No por la cárcel."
+  },
+  "services": {
+    "label": "Servicios",
+    "title": "Tú tienes el código. Nosotros hacemos el trabajo.",
+    "sub": "El software es gratis. Nuestro tiempo no.",
+    "tiers": {
+      "install": {
+        "name": "Instalación",
+        "tagline": "Operativo en una semana.",
+        "desc": "Desplegamos open-crm en tu propio VPS, conectamos el correo, importamos clientes y formamos al equipo.",
+        "price": "Desde 1 800 €",
+        "priceNote": "Pago único",
+        "include1": "Instalación y configuración del VPS",
+        "include2": "Integración de correo (Zoho o Gmail)",
+        "include3": "Migración desde tu sistema actual",
+        "include4": "Formación al equipo (3 horas)",
+        "include5": "30 días de soporte prioritario",
+        "cta": "Reservar llamada"
+      },
+      "customize": {
+        "name": "Personalización",
+        "tagline": "Construye lo que falta.",
+        "desc": "Módulos a medida, integraciones con tus sistemas, informes y flujos personalizados.",
+        "price": "Por proyecto",
+        "priceNote": "Presupuesto tras llamada",
+        "include1": "Análisis de requisitos y diseño técnico",
+        "include2": "Implementación de nuevos módulos",
+        "include3": "Integración con Fortnox, Visma, Hogia y más",
+        "include4": "Plantillas PDF e informes a medida",
+        "include5": "Todo el código fuente es tuyo",
+        "popular": "Más popular",
+        "cta": "Cuéntanos qué necesitas"
+      },
+      "maintain": {
+        "name": "Operación y Soporte",
+        "tagline": "Vigilamos por ti.",
+        "desc": "Mantenemos el sistema actualizado, monitorizado en seguridad, y respondemos cuando algo falla.",
+        "price": "Desde 240 € / mes",
+        "priceNote": "Cuota mensual",
+        "include1": "Actualizaciones de seguridad semanales",
+        "include2": "Monitorización 24/7",
+        "include3": "Soporte prioritario en menos de 4 horas",
+        "include4": "Informe de estado mensual",
+        "include5": "Backup y recuperación",
+        "cta": "Iniciar suscripción"
+      }
+    }
+  },
+  "finalCta": {
+    "title": "30 minutos. Sin rodeos.",
+    "sub": "Te enseñamos el sistema, escuchamos lo que necesitas, te damos un presupuesto directo. Puedes decir que no cuando quieras.",
+    "cta": "Reservar demo",
+    "secondary": "O hazlo tú mismo: lee la documentación"
+  },
+  "footer": {
+    "tagline": "CRM que sí es tuyo.",
+    "product": "Producto",
+    "modules": "Módulos",
+    "stack": "Stack",
+    "services": "Servicios",
+    "demo": "Demo",
+    "resources": "Recursos",
+    "github": "GitHub",
+    "docs": "Documentación",
+    "changelog": "Changelog",
+    "license": "Licencia MIT",
+    "company": "Empresa",
+    "about": "Sobre nosotros",
+    "contact": "Contacto",
+    "privacy": "Política de privacidad",
+    "rights": "Hecho por Hedberh AB en Estocolmo.",
+    "license_short": "Publicado bajo MIT"
+  }
+}

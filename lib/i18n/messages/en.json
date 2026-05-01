@@ -1,0 +1,215 @@
+{
+  "nav": {
+    "modules": "Modules",
+    "workflows": "Workflows",
+    "stack": "Stack",
+    "services": "Services",
+    "github": "GitHub",
+    "book": "Book a call"
+  },
+  "hero": {
+    "badge": "Open source · MIT licensed",
+    "titleLine1": "Your CRM.",
+    "titleLine2": "Actually yours.",
+    "sub": "Complete customer and project management for service companies. Build, own, customize. We help you make it yours.",
+    "ctaPrimary": "Book installation",
+    "ctaSecondary": "View on GitHub",
+    "command": "git clone https://github.com/rankgnar/open-crm-public",
+    "mockTitle": "open-crm.app",
+    "mockKunder": "Customers",
+    "mockProjekt": "Projects",
+    "mockOffert": "Quotes",
+    "mockEkonomi": "Finance",
+    "mockActive": "Active project",
+    "mockClient": "Karlsson Bygg AB",
+    "mockStatus": "In progress · 7 of 12 phases done",
+    "mockBudget": "Budget",
+    "mockSpent": "Spent"
+  },
+  "trust": {
+    "title": "Built on what doesn't break",
+    "items": {
+      "self": "Self-hosted",
+      "selfDesc": "Your data, your server",
+      "noLockIn": "No lock-in",
+      "noLockInDesc": "Export anytime",
+      "swedish": "Swedish-built",
+      "swedishDesc": "ROT, F-skatt, Fortnox",
+      "mit": "MIT licensed",
+      "mitDesc": "Fork and run"
+    }
+  },
+  "preview": {
+    "label": "Live in the app",
+    "title": "This isn't a mockup. This is the app.",
+    "sub": "Click between views. Sort, filter, change status. This is open-crm — for real — with fixture data.",
+    "hint": "Everything you click is real code. No video, no image — the component renders live.",
+    "tabs": {
+      "kunder": "Customers",
+      "projekt": "Projects",
+      "forslag": "Quotes",
+      "workflows": "Workflows",
+      "kalender": "Schedule",
+      "ekonomi": "Finance",
+      "personal": "Staff",
+      "chat": "Chat"
+    }
+  },
+  "workflows": {
+    "label": "Workflows · AI",
+    "title": "Build your own automation. Without code.",
+    "sub": "Visual node editor with triggers, AI nodes and actions. Plug in Claude, OpenAI, Mistral or your own models. Everything runs locally against your Postgres.",
+    "tagline": "You own the flows. You own the context.",
+    "cta": "See a workflow live",
+    "features": {
+      "0": {
+        "title": "Visual node editor",
+        "desc": "Triggers, conditions, AI, PDF, email, database. Drag-and-drop. Git-versioned."
+      },
+      "1": {
+        "title": "Multi-LLM",
+        "desc": "Claude, OpenAI, Gemini, Mistral. Your API key, your models. You decide."
+      },
+      "2": {
+        "title": "Cron & triggers",
+        "desc": "Schedules, status changes, document uploads, inbound email. Anything can start a flow."
+      },
+      "3": {
+        "title": "Project context",
+        "desc": "AI nodes get automatic access to customer, project, documents and prior decisions."
+      }
+    }
+  },
+  "integrations": {
+    "label": "Built-in integrations · and we build more if you need them"
+  },
+  "modules": {
+    "label": "Modules",
+    "title": "Everything a customer needs. Nothing more.",
+    "sub": "Eight modules. One natural flow. From first contact to paid invoice.",
+    "kunder": {
+      "title": "Customers",
+      "desc": "People, companies, contact points. With history and notes."
+    },
+    "projekt": {
+      "title": "Projects",
+      "desc": "Linked to a customer. With status, phases, documents and budget."
+    },
+    "schema": {
+      "title": "Schedule",
+      "desc": "Tasks, visits, deliveries and meetings in one shared calendar."
+    },
+    "arbete": {
+      "title": "Labor cost",
+      "desc": "Hours × rate. ROT deduction as standard. Per phase, per worker."
+    },
+    "material": {
+      "title": "Material cost",
+      "desc": "Quantity × unit price. Phase-grouped. Margin in real time."
+    },
+    "offert": {
+      "title": "Quote",
+      "desc": "Consolidates labor + materials. A PDF you actually want to send."
+    },
+    "ekonomi": {
+      "title": "Finance",
+      "desc": "Real cost vs budget. Per project and overall."
+    },
+    "fakturor": {
+      "title": "Invoices",
+      "desc": "Sent, unpaid, overdue, paid. Synced with Fortnox."
+    }
+  },
+  "stack": {
+    "label": "Stack",
+    "title": "No closed APIs. No black boxes.",
+    "sub": "Proven tools. All code visible. All data yours.",
+    "items": {
+      "electron": "Native on your machine",
+      "react": "Modern interface",
+      "supabase": "Postgres you own",
+      "ts": "Type-safe end to end",
+      "tailwind": "Consistent design",
+      "github": "Versioned in the open"
+    }
+  },
+  "why": {
+    "label": "Philosophy",
+    "title": "Stop renting. Start owning.",
+    "p1": "The industry sells subscriptions that hold your data hostage. The day you stop paying, everything disappears — contacts, projects, invoices, quotes, mail history.",
+    "p2": "open-crm is different. Source code is public under MIT. The database is yours. The server is yours. If we shut down tomorrow, you can keep running the system for ten more years — without us.",
+    "p3": "We charge for value. Not for jail."
+  },
+  "services": {
+    "label": "Services",
+    "title": "You own the code. We do the work.",
+    "sub": "Software is free. Our time isn't.",
+    "tiers": {
+      "install": {
+        "name": "Installation",
+        "tagline": "Up and running in a week.",
+        "desc": "We deploy open-crm on your own VPS, connect email, import customers and train the team.",
+        "price": "From 18 000 SEK",
+        "priceNote": "One-off",
+        "include1": "VPS installation and configuration",
+        "include2": "Email integration (Zoho or Gmail)",
+        "include3": "Data migration from your current system",
+        "include4": "Team training (3 hours)",
+        "include5": "30 days priority support",
+        "cta": "Book a call"
+      },
+      "customize": {
+        "name": "Customization",
+        "tagline": "Build what's missing.",
+        "desc": "Custom modules, integrations with your existing systems, tailored reports and flows.",
+        "price": "Per project",
+        "priceNote": "Quote after call",
+        "include1": "Requirements analysis and technical design",
+        "include2": "Implementation of new modules",
+        "include3": "Integration with Fortnox, Visma, Hogia and more",
+        "include4": "Custom PDF templates and reports",
+        "include5": "All source code belongs to you",
+        "popular": "Most popular",
+        "cta": "Tell us what you need"
+      },
+      "maintain": {
+        "name": "Operations & Support",
+        "tagline": "We watch so you don't have to.",
+        "desc": "We keep the system up to date, security-monitored, and respond when something breaks.",
+        "price": "From 2 400 SEK / month",
+        "priceNote": "Monthly fee",
+        "include1": "Weekly security updates",
+        "include2": "24/7 monitoring",
+        "include3": "Priority support within 4 hours",
+        "include4": "Monthly status report",
+        "include5": "Backup and recovery",
+        "cta": "Start subscription"
+      }
+    }
+  },
+  "finalCta": {
+    "title": "30 minutes. No nonsense.",
+    "sub": "We show the system, listen, give you a straight quote. Say no whenever you want.",
+    "cta": "Book demo",
+    "secondary": "Or run it yourself: read the docs"
+  },
+  "footer": {
+    "tagline": "CRM you actually own.",
+    "product": "Product",
+    "modules": "Modules",
+    "stack": "Stack",
+    "services": "Services",
+    "demo": "Demo",
+    "resources": "Resources",
+    "github": "GitHub",
+    "docs": "Documentation",
+    "changelog": "Changelog",
+    "license": "MIT license",
+    "company": "Company",
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy policy",
+    "rights": "Made by Hedberh AB in Stockholm.",
+    "license_short": "Released under MIT"
+  }
+}

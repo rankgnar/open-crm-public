@@ -1,0 +1,215 @@
+{
+  "nav": {
+    "modules": "Moduler",
+    "workflows": "Workflows",
+    "stack": "Stack",
+    "services": "Tjänster",
+    "github": "GitHub",
+    "book": "Boka samtal"
+  },
+  "hero": {
+    "badge": "Open source · MIT-licens",
+    "titleLine1": "Ditt CRM.",
+    "titleLine2": "På riktigt.",
+    "sub": "Komplett kund- och projektledning för svenska tjänsteföretag. Bygg, äg, anpassa. Vi hjälper dig att göra det till ditt.",
+    "ctaPrimary": "Boka installation",
+    "ctaSecondary": "Visa på GitHub",
+    "command": "git clone https://github.com/rankgnar/open-crm-public",
+    "mockTitle": "open-crm.app",
+    "mockKunder": "Kunder",
+    "mockProjekt": "Projekt",
+    "mockOffert": "Offerter",
+    "mockEkonomi": "Ekonomi",
+    "mockActive": "Aktivt projekt",
+    "mockClient": "Karlsson Bygg AB",
+    "mockStatus": "Pågående · 7 av 12 faser slutförda",
+    "mockBudget": "Budget",
+    "mockSpent": "Förbrukat"
+  },
+  "trust": {
+    "title": "Byggt på det som inte går sönder",
+    "items": {
+      "self": "Self-hosted",
+      "selfDesc": "Din data, din server",
+      "noLockIn": "Ingen inlåsning",
+      "noLockInDesc": "Exportera när du vill",
+      "swedish": "Svensk-byggt",
+      "swedishDesc": "ROT, F-skatt, Fortnox",
+      "mit": "MIT-licens",
+      "mitDesc": "Forka och kör"
+    }
+  },
+  "preview": {
+    "label": "Live i appen",
+    "title": "Det här är inte en mockup. Det här är appen.",
+    "sub": "Klicka mellan vyerna. Sortera, filtrera, byt status. Det här är open-crm — på riktigt — med fiktiv data.",
+    "hint": "Allt du klickar är riktig kod. Ingen video, ingen bild — själva komponenten renderar live.",
+    "tabs": {
+      "kunder": "Kunder",
+      "projekt": "Projekt",
+      "forslag": "Förslag",
+      "workflows": "Workflows",
+      "kalender": "Schema",
+      "ekonomi": "Ekonomi",
+      "personal": "Personal",
+      "chat": "Chat"
+    }
+  },
+  "workflows": {
+    "label": "Workflows · AI",
+    "title": "Bygg din egen automation. Utan kod.",
+    "sub": "Visuell node-editor med triggers, AI-noder och åtgärder. Koppla in Claude, OpenAI, Mistral eller egna modeller. Allt körs lokalt mot din Postgres.",
+    "tagline": "Du äger flödena. Du äger kontexten.",
+    "cta": "Se en workflow live",
+    "features": {
+      "0": {
+        "title": "Visuell node-editor",
+        "desc": "Triggers, conditions, AI, PDF, e-post, databas. Drag-and-drop. Versionerat i Git."
+      },
+      "1": {
+        "title": "Multi-LLM",
+        "desc": "Claude, OpenAI, Gemini, Mistral. Egen API-nyckel, egna modeller. Du väljer."
+      },
+      "2": {
+        "title": "Cron & triggers",
+        "desc": "Scheman, status-ändringar, dokumentuppladdning, e-post in. Allt kan starta ett flöde."
+      },
+      "3": {
+        "title": "Projekt-kontext",
+        "desc": "AI-noderna får automatisk åtkomst till kund, projekt, dokument och tidigare beslut."
+      }
+    }
+  },
+  "integrations": {
+    "label": "Färdiga integrationer · och vi bygger fler om du behöver"
+  },
+  "modules": {
+    "label": "Moduler",
+    "title": "Allt en kund kräver. Inget mer.",
+    "sub": "Åtta moduler. Ett naturligt flöde. Från första kontakt till betald faktura.",
+    "kunder": {
+      "title": "Kunder",
+      "desc": "Personer, företag, kontaktpunkter. Med historik och anteckningar."
+    },
+    "projekt": {
+      "title": "Projekt",
+      "desc": "Kopplat till kund. Med status, faser, dokument och budget."
+    },
+    "schema": {
+      "title": "Schema",
+      "desc": "Uppgifter, besök, leveranser och möten i en gemensam kalender."
+    },
+    "arbete": {
+      "title": "Arbetskostnad",
+      "desc": "Timmar × taxa. ROT-avdrag som standard. Per fas, per medarbetare."
+    },
+    "material": {
+      "title": "Materialkostnad",
+      "desc": "Antal × á-pris. Fasgrupperat. Marginal i realtid."
+    },
+    "offert": {
+      "title": "Offert",
+      "desc": "Konsoliderar arbete + material. PDF som du faktiskt vill skicka."
+    },
+    "ekonomi": {
+      "title": "Ekonomi",
+      "desc": "Verklig kostnad mot budget. Per projekt och totalt."
+    },
+    "fakturor": {
+      "title": "Fakturor",
+      "desc": "Skickade, obetalda, försenade, betalda. Synkroniserat mot Fortnox."
+    }
+  },
+  "stack": {
+    "label": "Stack",
+    "title": "Inga slutna API:er. Inga svarta lådor.",
+    "sub": "Beprövade verktyg. All kod synlig. All data din.",
+    "items": {
+      "electron": "Native på din dator",
+      "react": "Modernt gränssnitt",
+      "supabase": "Postgres som du äger",
+      "ts": "Typsäkert i hela stacken",
+      "tailwind": "Konsekvent design",
+      "github": "Allt versionerat öppet"
+    }
+  },
+  "why": {
+    "label": "Filosofi",
+    "title": "Sluta hyra. Börja äga.",
+    "p1": "Branschen säljer prenumerationer som tar din data som gisslan. När du slutar betala försvinner allt — kontakter, projekt, fakturor, offerter, mejlhistorik.",
+    "p2": "open-crm är annorlunda. Källkoden är publik under MIT-licens. Databasen är din. Servern är din. Om vi imorgon slutar leverera kan du fortsätta köra systemet i tio år till — utan oss.",
+    "p3": "Vi tar betalt för värde. Inte för fängelse."
+  },
+  "services": {
+    "label": "Tjänster",
+    "title": "Du äger koden. Vi gör jobbet.",
+    "sub": "Programvaran är gratis. Tiden vår.",
+    "tiers": {
+      "install": {
+        "name": "Installation",
+        "tagline": "Igång på en vecka.",
+        "desc": "Vi sätter upp open-crm på din egen VPS, kopplar e-post, importerar kunder och utbildar teamet.",
+        "price": "Från 18 000 SEK",
+        "priceNote": "Engångskostnad",
+        "include1": "VPS-installation och konfiguration",
+        "include2": "E-postintegration (Zoho eller Gmail)",
+        "include3": "Datamigrering från ditt nuvarande system",
+        "include4": "Utbildning för teamet (3 timmar)",
+        "include5": "30 dagar prioriterad support",
+        "cta": "Boka samtal"
+      },
+      "customize": {
+        "name": "Anpassning",
+        "tagline": "Bygg det som saknas.",
+        "desc": "Skräddarsydda moduler, integrationer mot dina befintliga system, anpassade rapporter och flöden.",
+        "price": "Per projekt",
+        "priceNote": "Offert efter samtal",
+        "include1": "Kravanalys och teknisk design",
+        "include2": "Implementation av nya moduler",
+        "include3": "Integration mot Fortnox, Visma, Hogia m.fl.",
+        "include4": "Anpassade PDF-mallar och rapporter",
+        "include5": "All källkod tillhör dig",
+        "popular": "Mest populär",
+        "cta": "Berätta vad du behöver"
+      },
+      "maintain": {
+        "name": "Drift & Support",
+        "tagline": "Vi tittar så du slipper.",
+        "desc": "Vi håller systemet uppdaterat, säkerhetsövervakat och svarar när något går fel.",
+        "price": "Från 2 400 SEK / mån",
+        "priceNote": "Månadsavgift",
+        "include1": "Säkerhetsuppdateringar varje vecka",
+        "include2": "Övervakning dygnet runt",
+        "include3": "Prioriterad support inom 4 timmar",
+        "include4": "Månatlig statusrapport",
+        "include5": "Backup och återställning",
+        "cta": "Starta abonnemang"
+      }
+    }
+  },
+  "finalCta": {
+    "title": "30 minuter. Inget skitsnack.",
+    "sub": "Vi visar systemet, lyssnar på dig, ger dig ett rakt bud. Säg nej när som helst.",
+    "cta": "Boka demo",
+    "secondary": "Eller kör själv: läs dokumentationen"
+  },
+  "footer": {
+    "tagline": "CRM som du faktiskt äger.",
+    "product": "Produkt",
+    "modules": "Moduler",
+    "stack": "Stack",
+    "services": "Tjänster",
+    "demo": "Demo",
+    "resources": "Resurser",
+    "github": "GitHub",
+    "docs": "Dokumentation",
+    "changelog": "Changelog",
+    "license": "MIT-licens",
+    "company": "Företag",
+    "about": "Om oss",
+    "contact": "Kontakt",
+    "privacy": "Integritetspolicy",
+    "rights": "Skapat av Hedberh AB i Stockholm.",
+    "license_short": "Released under MIT"
+  }
+}
