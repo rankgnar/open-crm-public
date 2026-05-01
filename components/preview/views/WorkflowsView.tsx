@@ -161,7 +161,7 @@ export function WorkflowsView() {
             className="relative flex-1 overflow-auto"
             style={{
               backgroundImage:
-                'radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px)',
+                'radial-gradient(circle, var(--color-grid-line) 1px, transparent 1px)',
               backgroundSize: '20px 20px',
             }}
           >
@@ -174,8 +174,8 @@ export function WorkflowsView() {
               >
                 <defs>
                   <linearGradient id="wfedge" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%" stopColor="rgba(34,211,238,0.5)" />
-                    <stop offset="100%" stopColor="rgba(34,211,238,0.85)" />
+                    <stop offset="0%" stopColor="rgba(52,211,153,0.5)" />
+                    <stop offset="100%" stopColor="rgba(52,211,153,0.85)" />
                   </linearGradient>
                   <marker
                     id="wfarrow"
@@ -186,7 +186,7 @@ export function WorkflowsView() {
                     markerHeight="5"
                     orient="auto"
                   >
-                    <path d="M0,0 L10,5 L0,10 z" fill="rgba(34,211,238,0.85)" />
+                    <path d="M0,0 L10,5 L0,10 z" fill="rgba(52,211,153,0.85)" />
                   </marker>
                 </defs>
                 {wf.edges.map((edge: WorkflowEdge, i: number) => {

@@ -15,13 +15,23 @@ export function Logo({ size = 28 }: { size?: number }) {
         priority
         className="rounded-md"
       />
+      {/* Wordmark — light variant for dark theme, dark variant for light theme */}
       <Image
         src="/logo-text-light.png"
         alt="OpenCRM"
         width={wordmarkWidth}
         height={wordmarkHeight}
         priority
-        className="block h-auto w-auto"
+        className="theme-dark-only block h-auto w-auto"
+        style={{ height: wordmarkHeight }}
+      />
+      <Image
+        src="/logo-text-dark.png"
+        alt="OpenCRM"
+        width={wordmarkWidth}
+        height={wordmarkHeight}
+        priority
+        className="theme-light-only block h-auto w-auto"
         style={{ height: wordmarkHeight }}
       />
     </span>

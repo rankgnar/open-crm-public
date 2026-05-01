@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl'
 import { Link } from '@/lib/i18n/navigation'
 import { Logo } from './Logo'
 import { LanguageSwitcher } from './LanguageSwitcher'
+import { ThemeToggle } from './ThemeToggle'
 
 const GITHUB_URL = 'https://github.com/rankgnar/open-crm-public'
 
@@ -54,6 +55,7 @@ export function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
+          <ThemeToggle />
           <LanguageSwitcher />
           <a
             href={GITHUB_URL}
@@ -92,6 +94,7 @@ export function Navbar() {
               </a>
             ))}
             <div className="mt-2 flex items-center gap-2 border-t border-border pt-3">
+              <ThemeToggle />
               <LanguageSwitcher />
               <a
                 href={GITHUB_URL}

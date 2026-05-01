@@ -8,7 +8,7 @@ export function WhySection() {
     <section className="relative py-24 md:py-32">
       <div
         aria-hidden
-        className="absolute left-1/2 top-1/2 h-[480px] w-[860px] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(ellipse_50%_50%_at_50%_50%,rgba(34,211,238,0.08),transparent_70%)]"
+        className="absolute left-1/2 top-1/2 h-[480px] w-[860px] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(ellipse_50%_50%_at_50%_50%,rgba(52,211,153,0.08),transparent_70%)]"
       />
 
       <div className="container-x relative">

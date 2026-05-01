@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next'
+import { THEME_INIT_SCRIPT } from '@/lib/theme'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -37,6 +38,9 @@ export default function RootLayout({
   return (
     <html lang="sv" suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }}
+        />
         <link rel="preconnect" href="https://rsms.me/" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         <link

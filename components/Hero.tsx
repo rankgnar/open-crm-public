@@ -25,7 +25,7 @@ export function Hero() {
       <div className="absolute inset-0 grid-bg mask-fade-b opacity-60" />
       <div
         aria-hidden
-        className="absolute left-1/2 top-0 h-[600px] w-[1200px] -translate-x-1/2 bg-[radial-gradient(ellipse_50%_50%_at_50%_0%,rgba(34,211,238,0.18),transparent_70%)]"
+        className="absolute left-1/2 top-0 h-[600px] w-[1200px] -translate-x-1/2 bg-[radial-gradient(ellipse_50%_50%_at_50%_0%,rgba(52,211,153,0.18),transparent_70%)]"
       />
 
       <div className="container-x relative">

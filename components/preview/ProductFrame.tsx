@@ -60,7 +60,7 @@ export function ProductFrame({
       {/* Glow */}
       <div
         aria-hidden
-        className="absolute -inset-12 rounded-full bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,rgba(34,211,238,0.14),transparent_65%)] blur-3xl"
+        className="absolute -inset-12 rounded-full bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,rgba(52,211,153,0.14),transparent_65%)] blur-3xl"
       />
 
       {/* Window */}
