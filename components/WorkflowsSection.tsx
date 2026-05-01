@@ -92,9 +92,13 @@ export function WorkflowsSection() {
             </div>
           </div>
 
-          {/* Right: visual node diagram */}
-          <div className="relative lg:col-span-7">
-            <NodeDiagram />
+          {/* Right: visual node diagram — horizontally scrollable on mobile */}
+          <div className="relative -mx-5 overflow-x-auto pb-3 [scrollbar-width:none] sm:mx-0 lg:col-span-7 lg:overflow-visible lg:pb-0 [&::-webkit-scrollbar]:hidden">
+            <div className="px-5 sm:px-0">
+              <div className="min-w-[760px] lg:min-w-0">
+                <NodeDiagram />
+              </div>
+            </div>
           </div>
         </div>
       </div>

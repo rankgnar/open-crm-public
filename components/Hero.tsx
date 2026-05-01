@@ -20,7 +20,7 @@ export function Hero() {
   }
 
   return (
-    <section className="relative overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32">
+    <section className="relative overflow-hidden pt-24 pb-20 md:pt-40 md:pb-32">
       {/* Background layers */}
       <div className="absolute inset-0 grid-bg mask-fade-b opacity-60" />
       <div
@@ -38,7 +38,7 @@ export function Hero() {
             </div>
 
             <h1
-              className="mt-6 text-[44px] font-semibold leading-[1.05] tracking-tightest text-balance sm:text-[56px] md:text-[64px] lg:text-[68px] animate-fade-up"
+              className="mt-5 text-[40px] font-semibold leading-[1.05] tracking-tightest text-balance sm:text-[56px] md:text-[64px] lg:text-[68px] animate-fade-up"
               style={{ animationDelay: '60ms' }}
             >
               <span className="headline-gradient block">{t('titleLine1')}</span>
@@ -95,14 +95,18 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right: live product frame */}
+          {/* Right: live product frame — horizontally scrollable on mobile */}
           <div
-            className="lg:col-span-6 animate-fade-up"
+            className="-mx-5 animate-fade-up overflow-x-auto pb-3 [scrollbar-width:none] sm:mx-0 lg:col-span-6 lg:overflow-visible lg:pb-0 [&::-webkit-scrollbar]:hidden"
             style={{ animationDelay: '300ms' }}
           >
-            <ProductFrame active="workspace" height={460}>
-              <WorkspaceView />
-            </ProductFrame>
+            <div className="px-5 sm:px-0">
+              <div className="min-w-[920px] lg:min-w-0">
+                <ProductFrame active="workspace" height={460}>
+                  <WorkspaceView />
+                </ProductFrame>
+              </div>
+            </div>
           </div>
         </div>
       </div>

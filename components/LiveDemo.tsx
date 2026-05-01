@@ -89,18 +89,22 @@ export function LiveDemo() {
           </div>
         </div>
 
-        {/* Frame with active view */}
-        <div className="mt-10">
-          <ProductFrame active={active} height={620}>
-            {active === 'kunder' && <KunderView />}
-            {active === 'projekt' && <ProjektView />}
-            {active === 'forslag' && <ForslagView />}
-            {active === 'workflows' && <WorkflowsView />}
-            {active === 'kalender' && <KalenderView />}
-            {active === 'ekonomi' && <EkonomiView />}
-            {active === 'personal' && <PersonalView />}
-            {active === 'chat' && <ChatView />}
-          </ProductFrame>
+        {/* Frame with active view — horizontally scrollable on mobile */}
+        <div className="-mx-5 mt-10 overflow-x-auto pb-3 [scrollbar-width:none] sm:mx-0 lg:overflow-visible lg:pb-0 [&::-webkit-scrollbar]:hidden">
+          <div className="px-5 sm:px-0">
+            <div className="min-w-[1020px] lg:min-w-0">
+              <ProductFrame active={active} height={620}>
+                {active === 'kunder' && <KunderView />}
+                {active === 'projekt' && <ProjektView />}
+                {active === 'forslag' && <ForslagView />}
+                {active === 'workflows' && <WorkflowsView />}
+                {active === 'kalender' && <KalenderView />}
+                {active === 'ekonomi' && <EkonomiView />}
+                {active === 'personal' && <PersonalView />}
+                {active === 'chat' && <ChatView />}
+              </ProductFrame>
+            </div>
+          </div>
         </div>
 
         <p className="mx-auto mt-8 max-w-xl text-center text-xs text-subtle">
