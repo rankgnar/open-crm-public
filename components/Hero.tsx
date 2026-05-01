@@ -95,18 +95,14 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right: live product frame — horizontally scrollable on mobile */}
+          {/* Right: live product frame — desktop only, hidden on mobile/tablet */}
           <div
-            className="-mx-5 animate-fade-up overflow-x-auto pb-3 [scrollbar-width:none] sm:mx-0 lg:col-span-6 lg:overflow-visible lg:pb-0 [&::-webkit-scrollbar]:hidden"
+            className="hidden animate-fade-up lg:col-span-6 lg:block"
             style={{ animationDelay: '300ms' }}
           >
-            <div className="px-5 sm:px-0">
-              <div className="min-w-[920px] lg:min-w-0">
-                <ProductFrame active="workspace" height={460}>
-                  <WorkspaceView />
-                </ProductFrame>
-              </div>
-            </div>
+            <ProductFrame active="workspace" height={460}>
+              <WorkspaceView />
+            </ProductFrame>
           </div>
         </div>
       </div>

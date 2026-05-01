@@ -71,13 +71,26 @@ export function Navbar() {
           </a>
         </div>
 
-        <button
-          className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border-strong text-muted md:hidden"
-          onClick={() => setMobileOpen((v) => !v)}
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? <X size={16} /> : <Menu size={16} />}
-        </button>
+        {/* Mobile actions — always visible outside the hamburger */}
+        <div className="flex items-center gap-1.5 md:hidden">
+          <ThemeToggle />
+          <a
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border-strong bg-bg-elevated/40 text-muted transition hover:border-faint hover:text-fg"
+          >
+            <Github size={14} />
+          </a>
+          <button
+            className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border-strong text-muted"
+            onClick={() => setMobileOpen((v) => !v)}
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <X size={16} /> : <Menu size={16} />}
+          </button>
+        </div>
       </div>
 
       {mobileOpen && (
@@ -93,21 +106,12 @@ export function Navbar() {
                 {l.label}
               </a>
             ))}
-            <div className="mt-2 flex items-center gap-2 border-t border-border pt-3">
-              <ThemeToggle />
+            <div className="mt-2 flex flex-col gap-3 border-t border-border pt-3">
               <LanguageSwitcher />
-              <a
-                href={GITHUB_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-9 items-center gap-1.5 rounded-md border border-border-strong px-3 text-sm text-muted"
-              >
-                <Github size={14} /> {t('github')}
-              </a>
               <a
                 href="#services"
                 onClick={() => setMobileOpen(false)}
-                className="btn btn-primary !h-9 !text-sm flex-1"
+                className="btn btn-primary !h-10 w-full !text-sm"
               >
                 {t('book')}
               </a>

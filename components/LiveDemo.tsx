@@ -42,7 +42,7 @@ export function LiveDemo() {
   const [active, setActive] = useState<ActiveSection>('kunder')
 
   return (
-    <section id="preview" className="relative scroll-mt-24 py-16 md:py-32">
+    <section id="preview" className="relative hidden scroll-mt-24 py-16 md:py-32 lg:block">
       <div
         aria-hidden
         className="absolute left-1/2 top-0 h-[600px] w-[1100px] -translate-x-1/2 bg-[radial-gradient(ellipse_50%_50%_at_50%_0%,rgba(52,211,153,0.10),transparent_70%)]"
