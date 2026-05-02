@@ -1,9 +1,11 @@
 {
   "nav": {
+    "produkten": "Produkten",
     "modules": "Moduler",
     "workflows": "Workflows",
     "stack": "Stack",
     "services": "Tjänster",
+    "why": "Varför",
     "github": "GitHub",
     "book": "Boka samtal"
   },
@@ -33,26 +35,30 @@
       "selfDesc": "Din data, din server",
       "noLockIn": "Ingen inlåsning",
       "noLockInDesc": "Exportera när du vill",
-      "swedish": "Svensk-byggt",
-      "swedishDesc": "ROT, F-skatt, Fortnox",
       "mit": "MIT-licens",
       "mitDesc": "Forka och kör"
     }
   },
   "preview": {
     "label": "Live i appen",
-    "title": "Det här är inte en mockup. Det här är appen.",
     "sub": "Klicka mellan vyerna. Sortera, filtrera, byt status. Det här är open-crm — på riktigt — med fiktiv data.",
     "hint": "Allt du klickar är riktig kod. Ingen video, ingen bild — själva komponenten renderar live.",
     "tabs": {
+      "workspace": "Workspace",
       "kunder": "Kunder",
       "projekt": "Projekt",
       "forslag": "Förslag",
       "workflows": "Workflows",
-      "kalender": "Schema",
+      "kalender": "Kalender",
       "ekonomi": "Ekonomi",
       "personal": "Personal",
       "chat": "Chat"
+    },
+    "frame": {
+      "arbete": "Arbete",
+      "fakturor": "Fakturor",
+      "tema": "Tema",
+      "installningar": "Inställningar"
     }
   },
   "workflows": {
@@ -96,7 +102,7 @@
       "desc": "Kopplat till kund. Med status, faser, dokument och budget."
     },
     "schema": {
-      "title": "Schema",
+      "title": "Kalender",
       "desc": "Uppgifter, besök, leveranser och möten i en gemensam kalender."
     },
     "arbete": {

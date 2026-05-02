@@ -1,4 +1,4 @@
-import { Server, Unlock, Flag, Scale } from 'lucide-react'
+import { Server, Unlock, Scale } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
 export function TrustStrip() {
@@ -7,14 +7,13 @@ export function TrustStrip() {
   const items = [
     { icon: Server, title: t('items.self'), desc: t('items.selfDesc') },
     { icon: Unlock, title: t('items.noLockIn'), desc: t('items.noLockInDesc') },
-    { icon: Flag, title: t('items.swedish'), desc: t('items.swedishDesc') },
     { icon: Scale, title: t('items.mit'), desc: t('items.mitDesc') },
   ]
 
   return (
     <section className="relative border-y border-border bg-surface/30">
       <div className="container-x py-8 md:py-10">
-        <div className="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-5 sm:gap-y-5 md:grid-cols-4 md:gap-x-6 md:gap-y-6">
+        <div className="grid grid-cols-1 gap-y-4 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-6">
           {items.map((item) => {
             const Icon = item.icon
             return (

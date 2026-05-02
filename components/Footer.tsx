@@ -1,11 +1,13 @@
 import { Github } from 'lucide-react'
 import { useTranslations } from 'next-intl'
+import { Link } from '@/lib/i18n/navigation'
 import { Logo } from './Logo'
 
 const GITHUB_URL = 'https://github.com/rankgnar/open-crm-public'
 
 export function Footer() {
   const t = useTranslations('footer')
+  const tNav = useTranslations('nav')
 
   return (
     <footer className="border-t border-border bg-bg">
@@ -29,10 +31,10 @@ export function Footer() {
 
           <div className="md:col-span-7 grid grid-cols-2 gap-8 sm:grid-cols-3">
             <FooterCol title={t('product')}>
-              <FooterLink href="#modules">{t('modules')}</FooterLink>
-              <FooterLink href="#stack">{t('stack')}</FooterLink>
-              <FooterLink href="#services">{t('services')}</FooterLink>
-              <FooterLink href="#cta">{t('demo')}</FooterLink>
+              <FooterLink href="/produkten" internal>{tNav('produkten')}</FooterLink>
+              <FooterLink href="/workflows" internal>{tNav('workflows')}</FooterLink>
+              <FooterLink href="/tjanster" internal>{tNav('services')}</FooterLink>
+              <FooterLink href="/varfor" internal>{tNav('why')}</FooterLink>
             </FooterCol>
 
             <FooterCol title={t('resources')}>
@@ -92,26 +94,35 @@ function FooterLink({
   href,
   children,
   external,
+  internal,
   muted,
 }: {
   href: string
   children: React.ReactNode
   external?: boolean
+  internal?: boolean
   muted?: boolean
 }) {
+  const className = `text-sm transition ${
+    muted ? 'text-subtle hover:text-muted' : 'text-muted hover:text-fg'
+  }`
   return (
     <li>
-      <a
-        href={href}
-        {...(external
-          ? { target: '_blank', rel: 'noopener noreferrer' }
-          : {})}
-        className={`text-sm transition ${
-          muted ? 'text-subtle hover:text-muted' : 'text-muted hover:text-fg'
-        }`}
-      >
-        {children}
-      </a>
+      {internal ? (
+        <Link href={href} className={className}>
+          {children}
+        </Link>
+      ) : (
+        <a
+          href={href}
+          {...(external
+            ? { target: '_blank', rel: 'noopener noreferrer' }
+            : {})}
+          className={className}
+        >
+          {children}
+        </a>
+      )}
     </li>
   )
 }

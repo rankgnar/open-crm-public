@@ -1,9 +1,11 @@
 {
   "nav": {
+    "produkten": "Producto",
     "modules": "Módulos",
     "workflows": "Workflows",
     "stack": "Stack",
     "services": "Servicios",
+    "why": "Por qué",
     "github": "GitHub",
     "book": "Reservar llamada"
   },
@@ -11,7 +13,7 @@
     "badge": "Open source · Licencia MIT",
     "titleLine1": "Tu CRM.",
     "titleLine2": "De verdad tuyo.",
-    "sub": "Gestión completa de clientes y proyectos para empresas de servicios. Constrúyelo, posée el código, adáptalo. Te ayudamos a hacerlo tuyo.",
+    "sub": "Gestión completa de clientes y proyectos para empresas de servicios suecas. Constrúyelo, posée el código, adáptalo. Te ayudamos a hacerlo tuyo.",
     "ctaPrimary": "Reservar instalación",
     "ctaSecondary": "Ver en GitHub",
     "command": "git clone https://github.com/rankgnar/open-crm-public",
@@ -33,18 +35,16 @@
       "selfDesc": "Tus datos, tu servidor",
       "noLockIn": "Sin lock-in",
       "noLockInDesc": "Exporta cuando quieras",
-      "swedish": "Hecho en Suecia",
-      "swedishDesc": "ROT, F-skatt, Fortnox",
       "mit": "Licencia MIT",
       "mitDesc": "Forkea y úsalo"
     }
   },
   "preview": {
     "label": "En vivo en la app",
-    "title": "Esto no es un mockup. Es la app.",
     "sub": "Cambia entre vistas. Ordena, filtra, cambia estado. Esto es open-crm — de verdad — con datos ficticios.",
     "hint": "Todo lo que clicas es código real. Sin vídeo, sin imagen — el componente renderiza en vivo.",
     "tabs": {
+      "workspace": "Workspace",
       "kunder": "Clientes",
       "projekt": "Proyectos",
       "forslag": "Presupuestos",
@@ -53,6 +53,12 @@
       "ekonomi": "Economía",
       "personal": "Personal",
       "chat": "Chat"
+    },
+    "frame": {
+      "arbete": "Mano de obra",
+      "fakturor": "Facturas",
+      "tema": "Tema",
+      "installningar": "Ajustes"
     }
   },
   "workflows": {
@@ -96,7 +102,7 @@
       "desc": "Vinculados a un cliente. Con estado, fases, documentos y presupuesto."
     },
     "schema": {
-      "title": "Planificación",
+      "title": "Calendario",
       "desc": "Tareas, visitas, entregas y reuniones en un calendario común."
     },
     "arbete": {
@@ -149,7 +155,7 @@
         "name": "Instalación",
         "tagline": "Operativo en una semana.",
         "desc": "Desplegamos open-crm en tu propio VPS, conectamos el correo, importamos clientes y formamos al equipo.",
-        "price": "Desde 1 800 €",
+        "price": "Desde 18 000 SEK",
         "priceNote": "Pago único",
         "include1": "Instalación y configuración del VPS",
         "include2": "Integración de correo (Zoho o Gmail)",
@@ -176,7 +182,7 @@
         "name": "Operación y Soporte",
         "tagline": "Vigilamos por ti.",
         "desc": "Mantenemos el sistema actualizado, monitorizado en seguridad, y respondemos cuando algo falla.",
-        "price": "Desde 240 € / mes",
+        "price": "Desde 2 400 SEK / mes",
         "priceNote": "Cuota mensual",
         "include1": "Actualizaciones de seguridad semanales",
         "include2": "Monitorización 24/7",

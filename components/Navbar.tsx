@@ -23,10 +23,10 @@ export function Navbar() {
   }, [])
 
   const links = [
-    { href: '#modules', label: t('modules') },
-    { href: '#workflows', label: t('workflows') },
-    { href: '#stack', label: t('stack') },
-    { href: '#services', label: t('services') },
+    { href: '/produkten', label: t('produkten') },
+    { href: '/workflows', label: t('workflows') },
+    { href: '/tjanster', label: t('services') },
+    { href: '/varfor', label: t('why') },
   ]
 
   return (
@@ -44,13 +44,13 @@ export function Navbar() {
 
         <nav className="hidden items-center gap-7 md:flex">
           {links.map((l) => (
-            <a
+            <Link
               key={l.href}
               href={l.href}
               className="text-sm text-muted transition hover:text-fg"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -66,9 +66,9 @@ export function Navbar() {
             <Github size={14} />
             <span>{t('github')}</span>
           </a>
-          <a href="#services" className="btn btn-primary !h-9 !text-sm">
+          <Link href="/tjanster" className="btn btn-primary !h-9 !text-sm">
             {t('book')}
-          </a>
+          </Link>
         </div>
 
         {/* Mobile actions — always visible outside the hamburger */}
@@ -97,24 +97,24 @@ export function Navbar() {
         <div className="border-t border-border bg-bg/95 backdrop-blur-xl md:hidden">
           <div className="container-x flex flex-col gap-1 py-3">
             {links.map((l) => (
-              <a
+              <Link
                 key={l.href}
                 href={l.href}
                 onClick={() => setMobileOpen(false)}
                 className="rounded-md px-3 py-2.5 text-sm text-fg hover:bg-hover"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
             <div className="mt-2 flex flex-col gap-3 border-t border-border pt-3">
               <LanguageSwitcher />
-              <a
-                href="#services"
+              <Link
+                href="/tjanster"
                 onClick={() => setMobileOpen(false)}
                 className="btn btn-primary !h-10 w-full !text-sm"
               >
                 {t('book')}
-              </a>
+              </Link>
             </div>
           </div>
         </div>

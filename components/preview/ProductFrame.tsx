@@ -17,6 +17,7 @@ import {
   Sun,
   type LucideIcon,
 } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 export type ActiveSection =
   | 'workspace'
@@ -29,21 +30,37 @@ export type ActiveSection =
   | 'workflows'
   | 'chat'
 
-const NAV: Array<{ key: ActiveSection; icon: LucideIcon; label: string }> = [
-  { key: 'workspace', icon: Home, label: 'Workspace' },
-  { key: 'kunder', icon: Users, label: 'Kunder' },
-  { key: 'projekt', icon: FolderKanban, label: 'Projekt' },
-  { key: 'forslag', icon: FileText, label: 'Förslag' },
-  { key: 'kalender', icon: CalendarDays, label: 'Schema' },
-  { key: 'ekonomi', icon: TrendingUp, label: 'Ekonomi' },
-  { key: 'personal', icon: UserCog, label: 'Personal' },
+type TabKey =
+  | 'workspace'
+  | 'kunder'
+  | 'projekt'
+  | 'forslag'
+  | 'kalender'
+  | 'ekonomi'
+  | 'personal'
+  | 'workflows'
+  | 'chat'
+type FrameKey = 'arbete' | 'fakturor' | 'tema' | 'installningar'
+
+const NAV: Array<{ key: ActiveSection; icon: LucideIcon; tabKey: TabKey }> = [
+  { key: 'workspace', icon: Home, tabKey: 'workspace' },
+  { key: 'kunder', icon: Users, tabKey: 'kunder' },
+  { key: 'projekt', icon: FolderKanban, tabKey: 'projekt' },
+  { key: 'forslag', icon: FileText, tabKey: 'forslag' },
+  { key: 'kalender', icon: CalendarDays, tabKey: 'kalender' },
+  { key: 'ekonomi', icon: TrendingUp, tabKey: 'ekonomi' },
+  { key: 'personal', icon: UserCog, tabKey: 'personal' },
 ]
 
-const NAV_ALSO: Array<{ key: ActiveSection | null; icon: LucideIcon; label: string }> = [
-  { key: 'workflows', icon: Workflow, label: 'Workflows' },
-  { key: 'chat', icon: MessageSquare, label: 'Chat' },
-  { key: null, icon: HardHat, label: 'Arbete' },
-  { key: null, icon: Receipt, label: 'Fakturor' },
+type AlsoItem =
+  | { key: ActiveSection; icon: LucideIcon; tabKey: TabKey }
+  | { key: null; icon: LucideIcon; frameKey: FrameKey }
+
+const NAV_ALSO: AlsoItem[] = [
+  { key: 'workflows', icon: Workflow, tabKey: 'workflows' },
+  { key: 'chat', icon: MessageSquare, tabKey: 'chat' },
+  { key: null, icon: HardHat, frameKey: 'arbete' },
+  { key: null, icon: Receipt, frameKey: 'fakturor' },
 ]
 
 export function ProductFrame({
@@ -55,6 +72,8 @@ export function ProductFrame({
   children: React.ReactNode
   height?: number
 }) {
+  const tTabs = useTranslations('preview.tabs')
+  const tFrame = useTranslations('preview.frame')
   return (
     <div className="relative w-full">
       {/* Glow */}
@@ -104,7 +123,7 @@ export function ProductFrame({
                 return (
                   <div
                     key={item.key}
-                    title={item.label}
+                    title={tTabs(item.tabKey)}
                     className={`mb-0.5 flex h-9 items-center justify-center rounded-md transition-colors ${
                       isActive ? 'text-fg' : 'text-muted'
                     }`}
@@ -124,10 +143,12 @@ export function ProductFrame({
               {NAV_ALSO.map((item, i) => {
                 const Icon = item.icon
                 const isActive = item.key === active
+                const label =
+                  'tabKey' in item ? tTabs(item.tabKey) : tFrame(item.frameKey)
                 return (
                   <div
                     key={i}
-                    title={item.label}
+                    title={label}
                     className={`mb-0.5 flex h-9 items-center justify-center rounded-md transition-colors ${
                       isActive ? 'text-fg' : 'text-subtle'
                     }`}
@@ -145,13 +166,13 @@ export function ProductFrame({
 
             <div className="flex flex-col items-center gap-1 px-2 pb-3">
               <button
-                title="Tema"
+                title={tFrame('tema')}
                 className="flex h-9 w-9 items-center justify-center rounded-md text-subtle"
               >
                 <Sun size={14} strokeWidth={1.75} />
               </button>
               <button
-                title="Inställningar"
+                title={tFrame('installningar')}
                 className="flex h-9 w-9 items-center justify-center rounded-md text-subtle"
               >
                 <Settings size={14} strokeWidth={1.75} />

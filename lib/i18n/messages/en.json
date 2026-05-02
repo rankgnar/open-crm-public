@@ -1,9 +1,11 @@
 {
   "nav": {
+    "produkten": "Product",
     "modules": "Modules",
     "workflows": "Workflows",
     "stack": "Stack",
     "services": "Services",
+    "why": "Why",
     "github": "GitHub",
     "book": "Book a call"
   },
@@ -11,7 +13,7 @@
     "badge": "Open source · MIT licensed",
     "titleLine1": "Your CRM.",
     "titleLine2": "Actually yours.",
-    "sub": "Complete customer and project management for service companies. Build, own, customize. We help you make it yours.",
+    "sub": "Complete customer and project management for Swedish service companies. Build, own, customize. We help you make it yours.",
     "ctaPrimary": "Book installation",
     "ctaSecondary": "View on GitHub",
     "command": "git clone https://github.com/rankgnar/open-crm-public",
@@ -33,26 +35,30 @@
       "selfDesc": "Your data, your server",
       "noLockIn": "No lock-in",
       "noLockInDesc": "Export anytime",
-      "swedish": "Swedish-built",
-      "swedishDesc": "ROT, F-skatt, Fortnox",
       "mit": "MIT licensed",
       "mitDesc": "Fork and run"
     }
   },
   "preview": {
     "label": "Live in the app",
-    "title": "This isn't a mockup. This is the app.",
     "sub": "Click between views. Sort, filter, change status. This is open-crm — for real — with fixture data.",
     "hint": "Everything you click is real code. No video, no image — the component renders live.",
     "tabs": {
+      "workspace": "Workspace",
       "kunder": "Customers",
       "projekt": "Projects",
       "forslag": "Quotes",
       "workflows": "Workflows",
-      "kalender": "Schedule",
+      "kalender": "Calendar",
       "ekonomi": "Finance",
       "personal": "Staff",
       "chat": "Chat"
+    },
+    "frame": {
+      "arbete": "Labor",
+      "fakturor": "Invoices",
+      "tema": "Theme",
+      "installningar": "Settings"
     }
   },
   "workflows": {
@@ -96,7 +102,7 @@
       "desc": "Linked to a customer. With status, phases, documents and budget."
     },
     "schema": {
-      "title": "Schedule",
+      "title": "Calendar",
       "desc": "Tasks, visits, deliveries and meetings in one shared calendar."
     },
     "arbete": {

@@ -51,9 +51,6 @@ export function LiveDemo() {
       <div className="container-x relative">
         <header className="mx-auto max-w-2xl text-center">
           <p className="eyebrow justify-center">{t('label')}</p>
-          <h2 className="mt-5 text-balance text-[26px] font-semibold tracking-tight text-fg-strong sm:text-4xl md:text-5xl">
-            <span className="headline-gradient">{t('title')}</span>
-          </h2>
           <p className="mx-auto mt-5 max-w-xl text-base text-muted text-balance">
             {t('sub')}
           </p>
