@@ -13,7 +13,7 @@
     "badge": "Open source · Licencia MIT",
     "titleLine1": "Tu CRM.",
     "titleLine2": "De verdad tuyo.",
-    "sub": "Gestión completa de clientes y proyectos para empresas de servicios suecas. Constrúyelo, posée el código, adáptalo. Te ayudamos a hacerlo tuyo.",
+    "sub": "Un CRM completo que protege tus datos. Todo se ejecuta en tu propio servidor — no compartimos nada con terceros.",
     "ctaPrimary": "Reservar instalación",
     "ctaSecondary": "Ver en GitHub",
     "command": "git clone https://github.com/rankgnar/open-crm-public",
