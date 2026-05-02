@@ -101,7 +101,7 @@ export function Hero() {
             className="hidden animate-fade-up lg:col-span-6 lg:block"
             style={{ animationDelay: '300ms' }}
           >
-            <ProductFrame active="workspace" height={460}>
+            <ProductFrame active="workspace" height={460} naturalWidth={640}>
               <WorkspaceView />
             </ProductFrame>
           </div>

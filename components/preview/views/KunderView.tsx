@@ -163,14 +163,14 @@ export function KunderView() {
   return (
     <div className="flex h-full flex-col">
       {/* Header */}
-      <div className="flex flex-wrap items-center gap-2 border-b border-border px-4 py-3 md:flex-nowrap md:gap-4 md:px-6">
+      <div className="flex items-center gap-4 border-b border-border px-6 py-3">
         <div className="flex shrink-0 items-center gap-2.5">
           <h1 className="text-base font-semibold text-fg">Kunder</h1>
           <span className="rounded-full border border-border bg-elevated px-2 py-0.5 text-xs text-muted">
             {isFiltering ? `${filtered.length} / ${data.length}` : data.length}
           </span>
         </div>
-        <div className="relative min-w-0 flex-1 md:max-w-xs">
+        <div className="relative max-w-xs flex-1">
           <Search
             size={13}
             className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-subtle"
@@ -179,7 +179,7 @@ export function KunderView() {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Sök..."
+            placeholder="Sök namn, nr, e-post, ort..."
             className="input w-full pl-8 pr-7 text-sm"
           />
           {query && (
@@ -194,7 +194,7 @@ export function KunderView() {
         <select
           value={statusFilter}
           onChange={(e) => setStatusFilter(e.target.value)}
-          className="input hidden w-48 shrink-0 text-sm text-muted md:block"
+          className="input w-48 shrink-0 text-sm text-muted"
         >
           <option value="">Alla statusar</option>
           {kundStatusar.map((s) => (
@@ -203,7 +203,7 @@ export function KunderView() {
             </option>
           ))}
         </select>
-        <button className="ml-auto hidden shrink-0 items-center gap-1.5 rounded-lg border border-border bg-elevated px-3 py-1.5 text-sm text-fg transition-colors hover:bg-hover sm:flex">
+        <button className="ml-auto flex shrink-0 items-center gap-1.5 rounded-lg border border-border bg-elevated px-3 py-1.5 text-sm text-fg transition-colors hover:bg-hover">
           <Plus size={14} /> Ny kund
         </button>
       </div>

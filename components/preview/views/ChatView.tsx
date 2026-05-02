@@ -18,8 +18,8 @@ export function ChatView() {
 
   return (
     <div className="flex h-full">
-      {/* Thread list — desktop only; mobile shows just the active conversation */}
-      <aside className="hidden w-72 shrink-0 flex-col border-r border-border bg-sidebar md:flex lg:w-80">
+      {/* Thread list */}
+      <aside className="flex w-80 shrink-0 flex-col border-r border-border bg-sidebar">
         <div className="border-b border-border p-4">
           <h1 className="text-base font-semibold text-fg">Chat</h1>
           <div className="relative mt-3">
@@ -77,9 +77,9 @@ export function ChatView() {
       </aside>
 
       {/* Active conversation */}
-      <main className="flex min-w-0 flex-1 flex-col">
+      <main className="flex flex-1 flex-col">
         {/* Header */}
-        <div className="flex shrink-0 items-center justify-between gap-3 border-b border-border bg-sidebar px-4 py-3 md:px-6">
+        <div className="flex shrink-0 items-center justify-between border-b border-border bg-sidebar px-6 py-3">
           <div className="flex items-center gap-3">
             <div className="relative">
               <div
@@ -104,7 +104,7 @@ export function ChatView() {
         </div>
 
         {/* Messages */}
-        <div className="flex flex-1 flex-col gap-3 overflow-auto px-4 py-5 md:px-6">
+        <div className="flex flex-1 flex-col gap-3 overflow-auto px-6 py-5">
           <div className="self-center text-[10px] uppercase tracking-widest text-subtle">
             Idag
           </div>

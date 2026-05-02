@@ -61,32 +61,30 @@ export function ForslagView() {
   return (
     <div className="flex h-full flex-col">
       {/* Header */}
-      <div className="flex shrink-0 flex-wrap items-center justify-between gap-2 border-b border-border bg-sidebar px-4 py-3 md:flex-nowrap md:gap-4 md:px-6">
+      <div className="flex shrink-0 items-center justify-between gap-4 border-b border-border bg-sidebar px-6 py-3">
         <div className="flex min-w-0 flex-1 items-center gap-3">
           <button className="flex shrink-0 items-center gap-1.5 text-sm text-muted transition-colors hover:text-fg">
             <ArrowLeft size={14} />
             Förslag
           </button>
           <span className="shrink-0 text-subtle">/</span>
-          <span className="min-w-0 shrink truncate text-sm font-medium text-fg">
+          <span className="shrink-0 truncate text-sm font-medium text-fg">
             {forslag.forslag_nummer} — {forslag.titel}
           </span>
-          <div className="hidden shrink-0 items-center gap-1.5 rounded-full border border-border bg-elevated px-2.5 py-1 sm:flex">
+          <div className="flex shrink-0 items-center gap-1.5 rounded-full border border-border bg-elevated px-2.5 py-1">
             <span className={`size-1.5 rounded-full ${status.dot}`} />
             <span className={`text-[11px] ${status.text}`}>{status.label}</span>
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <button className="hidden items-center gap-1.5 rounded-lg border border-border bg-elevated px-3 py-1.5 text-xs text-fg transition-colors hover:bg-hover sm:flex">
+          <button className="flex items-center gap-1.5 rounded-lg border border-border bg-elevated px-3 py-1.5 text-xs text-fg transition-colors hover:bg-hover">
             <FileDown size={12} /> PDF
           </button>
-          <button className="hidden items-center gap-1.5 rounded-lg border border-border bg-elevated px-3 py-1.5 text-xs text-fg transition-colors hover:bg-hover md:flex">
+          <button className="flex items-center gap-1.5 rounded-lg border border-border bg-elevated px-3 py-1.5 text-xs text-fg transition-colors hover:bg-hover">
             <Pencil size={12} /> Redigera
           </button>
           <button className="flex items-center gap-1.5 rounded-lg bg-fg px-3 py-1.5 text-xs font-medium text-bg transition-opacity hover:opacity-90">
-            <Send size={12} />
-            <span className="hidden sm:inline">Skicka för signatur</span>
-            <span className="sm:hidden">Skicka</span>
+            <Send size={12} /> Skicka för signatur
           </button>
         </div>
       </div>
@@ -96,12 +94,12 @@ export function ForslagView() {
         {/* Main column */}
         <div className="flex flex-1 flex-col overflow-auto">
           {/* Title block */}
-          <div className="border-b border-border px-4 py-5 md:px-6 md:py-6 lg:px-8">
+          <div className="border-b border-border px-8 py-6">
             <p className="mb-0.5 text-[11px] uppercase tracking-widest text-muted">
               {forslag.forslag_nummer} · {forslag.kundnamn}
             </p>
             <h2 className="text-xl font-semibold text-fg">{forslag.titel}</h2>
-            <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px]">
+            <div className="mt-3 flex items-center gap-4 text-[11px]">
               <span className="text-subtle">
                 Projekt:{' '}
                 <span className="font-mono text-muted">
@@ -121,7 +119,7 @@ export function ForslagView() {
           {forslag.faser.map((fas, i) => {
             const t = totals[i]
             return (
-              <div key={fas.id} className="border-b border-border px-4 py-5 md:px-6 md:py-6 lg:px-8">
+              <div key={fas.id} className="border-b border-border px-8 py-6">
                 <div className="mb-4 flex items-center justify-between">
                   <p className="text-[11px] uppercase tracking-widest text-muted">
                     Fas {i + 1} · {fas.namn}

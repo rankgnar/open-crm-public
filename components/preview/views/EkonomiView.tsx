@@ -29,10 +29,10 @@ export function EkonomiView() {
   return (
     <div className="flex h-full flex-col">
       {/* Header */}
-      <div className="flex shrink-0 flex-wrap items-center justify-between gap-2 border-b border-border bg-sidebar px-4 py-3 md:flex-nowrap md:gap-4 md:px-6">
-        <div className="flex min-w-0 items-center gap-3">
+      <div className="flex shrink-0 items-center justify-between gap-4 border-b border-border bg-sidebar px-6 py-3">
+        <div className="flex items-center gap-3">
           <h1 className="text-base font-semibold text-fg">Ekonomi</h1>
-          <div className="hidden items-center gap-1 rounded-md border border-border bg-elevated p-0.5 sm:flex">
+          <div className="flex items-center gap-1 rounded-md border border-border bg-elevated p-0.5">
             {(['Översikt', 'Per projekt', 'Per månad', 'Kostnader'] as const).map(
               (v, i) => (
                 <button
@@ -48,7 +48,7 @@ export function EkonomiView() {
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <button className="hidden items-center gap-1.5 rounded-lg border border-border bg-elevated px-3 py-1.5 text-xs text-fg transition-colors hover:bg-hover sm:flex">
+          <button className="flex items-center gap-1.5 rounded-lg border border-border bg-elevated px-3 py-1.5 text-xs text-fg transition-colors hover:bg-hover">
             <Filter size={12} /> Filter
           </button>
           <button className="flex items-center gap-1.5 rounded-lg border border-border bg-elevated px-3 py-1.5 text-xs text-fg transition-colors hover:bg-hover">
@@ -58,7 +58,7 @@ export function EkonomiView() {
       </div>
 
       {/* KPI grid */}
-      <div className="grid shrink-0 grid-cols-2 gap-px border-b border-border bg-border md:grid-cols-4">
+      <div className="grid shrink-0 grid-cols-4 gap-px border-b border-border bg-border">
         <KpiCard
           label="Total budget"
           value={fmtSEK(totalBudget)}
@@ -207,17 +207,17 @@ function KpiCard({
   icon?: React.ReactNode
 }) {
   return (
-    <div className="flex flex-col gap-1 bg-bg-elevated px-4 py-3 md:px-6 md:py-4">
+    <div className="flex flex-col gap-1 bg-bg-elevated px-6 py-4">
       <p className="text-[10px] font-semibold uppercase tracking-widest text-muted">
         {label}
       </p>
       <div className="flex items-center gap-2">
-        <span className="text-base font-semibold tabular-nums text-fg md:text-xl">
+        <span className="text-xl font-semibold tabular-nums text-fg">
           {value}
         </span>
         {icon}
       </div>
-      <p className="truncate text-[11px] text-subtle">{sub}</p>
+      <p className="text-[11px] text-subtle">{sub}</p>
     </div>
   )
 }
