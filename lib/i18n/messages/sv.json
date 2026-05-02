@@ -7,7 +7,7 @@
     "services": "Tjänster",
     "why": "Varför",
     "github": "GitHub",
-    "book": "Boka samtal"
+    "book": "Skicka e-post"
   },
   "hero": {
     "badge": "Open source · MIT-licens",
@@ -32,7 +32,6 @@
     "modulesTeaser": {
       "eyebrow": "Moduler",
       "title": "Från första kontakt till betald faktura",
-      "sub": "Åtta moduler i ett naturligt flöde. Ingen ren mockup — kör dem live.",
       "cta": "Se alla moduler & demo"
     },
     "workflowsTeaser": {
@@ -43,9 +42,9 @@
     },
     "servicesTeaser": {
       "eyebrow": "Tjänster",
-      "title": "Du äger koden. Vi gör jobbet.",
-      "sub": "Installation, anpassning och drift på din egen VPS.",
-      "cta": "Se priser & vad som ingår"
+      "title": "Du äger koden.",
+      "sub": "Behöver du hjälp att komma igång eller anpassa? Skicka ett mejl — vi anpassar oss efter ditt behov.",
+      "cta": "Skicka e-post"
     },
     "whyTeaser": {
       "eyebrow": "Varför",
@@ -192,55 +191,44 @@
   },
   "services": {
     "label": "Tjänster",
-    "title": "Du äger koden. Vi gör jobbet.",
-    "sub": "Programvaran är gratis. Tiden vår.",
-    "tiers": {
-      "install": {
-        "name": "Installation",
-        "tagline": "Igång på en vecka.",
-        "desc": "Vi sätter upp open-crm på din egen VPS, kopplar e-post, importerar kunder och utbildar teamet.",
-        "price": "Från 18 000 SEK",
-        "priceNote": "Engångskostnad",
-        "include1": "VPS-installation och konfiguration",
-        "include2": "E-postintegration (Zoho eller Gmail)",
-        "include3": "Datamigrering från ditt nuvarande system",
-        "include4": "Utbildning för teamet (3 timmar)",
-        "include5": "30 dagar prioriterad support",
-        "cta": "Boka samtal"
+    "title": "Personlig hjälp efter dina behov",
+    "sub": "Ingen prislista, ingen prenumeration. Bara ett mejl för att förstå vad du behöver — och en lösning anpassad efter dig.",
+    "areas": {
+      "installation": {
+        "title": "Installation och uppstart",
+        "desc": "Vi sätter upp open-crm på din egen VPS och konfigurerar allt så du kan börja arbeta direkt."
       },
-      "customize": {
-        "name": "Anpassning",
-        "tagline": "Bygg det som saknas.",
-        "desc": "Skräddarsydda moduler, integrationer mot dina befintliga system, anpassade rapporter och flöden.",
-        "price": "Per projekt",
-        "priceNote": "Offert efter samtal",
-        "include1": "Kravanalys och teknisk design",
-        "include2": "Implementation av nya moduler",
-        "include3": "Integration mot Fortnox, Visma, Hogia m.fl.",
-        "include4": "Anpassade PDF-mallar och rapporter",
-        "include5": "All källkod tillhör dig",
-        "popular": "Mest populär",
-        "cta": "Berätta vad du behöver"
+      "customization": {
+        "title": "Anpassningar och nya moduler",
+        "desc": "Skräddarsydda funktioner och moduler som matchar exakt hur ditt företag arbetar."
       },
-      "maintain": {
-        "name": "Drift & Support",
-        "tagline": "Vi tittar så du slipper.",
-        "desc": "Vi håller systemet uppdaterat, säkerhetsövervakat och svarar när något går fel.",
-        "price": "Från 2 400 SEK / mån",
-        "priceNote": "Månadsavgift",
-        "include1": "Säkerhetsuppdateringar varje vecka",
-        "include2": "Övervakning dygnet runt",
-        "include3": "Prioriterad support inom 4 timmar",
-        "include4": "Månatlig statusrapport",
-        "include5": "Backup och återställning",
-        "cta": "Starta abonnemang"
+      "integration": {
+        "title": "Integrationer",
+        "desc": "Koppling till Fortnox, Visma, Hogia, e-postleverantörer eller andra system du redan använder."
+      },
+      "support": {
+        "title": "Teknisk support",
+        "desc": "Hjälp när något krånglar. Felsökning, uppdateringar och säkerhetspatchning när du behöver det."
+      },
+      "training": {
+        "title": "Utbildning",
+        "desc": "Onboarding för teamet så alla kommer igång snabbt och utnyttjar systemet fullt ut."
+      },
+      "migration": {
+        "title": "Migrering",
+        "desc": "Flyttning av data från ditt nuvarande system — kunder, projekt, fakturor, dokument."
       }
+    },
+    "cta": {
+      "title": "Hör av dig",
+      "sub": "Berätta vad du behöver så hittar vi rätt lösning. Inga paket, ingen prislista — bara ett mejl.",
+      "button": "Skicka e-post"
     }
   },
   "finalCta": {
-    "title": "30 minuter. Inget skitsnack.",
-    "sub": "Vi visar systemet, lyssnar på dig, ger dig ett rakt bud. Säg nej när som helst.",
-    "cta": "Boka demo",
+    "title": "Hör av dig",
+    "sub": "Skriv till oss på hello@open-crm.org. Berätta vad du behöver — vi återkommer med ett konkret förslag, utan paket eller prislista.",
+    "cta": "Skicka e-post",
     "secondary": "Eller kör själv: läs dokumentationen"
   },
   "footer": {

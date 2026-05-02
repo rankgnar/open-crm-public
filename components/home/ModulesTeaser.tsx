@@ -36,9 +36,6 @@ export function ModulesTeaser() {
           <h2 className="mt-3 text-balance text-xl font-semibold tracking-tight text-fg-strong sm:text-3xl md:mt-5 md:text-[40px]">
             <span className="headline-gradient">{tHome('title')}</span>
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-sm text-muted text-balance md:mt-5 md:text-base">
-            {tHome('sub')}
-          </p>
         </header>
 
         {/* Pipeline — vertical centered stepper on mobile, horizontal on md+ */}

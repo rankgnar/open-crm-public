@@ -7,7 +7,7 @@
     "services": "Servicios",
     "why": "Por qué",
     "github": "GitHub",
-    "book": "Reservar llamada"
+    "book": "Enviar email"
   },
   "hero": {
     "badge": "Open source · Licencia MIT",
@@ -32,7 +32,6 @@
     "modulesTeaser": {
       "eyebrow": "Módulos",
       "title": "Del primer contacto a la factura cobrada",
-      "sub": "Ocho módulos en un flujo natural. No un mockup — pruébalos en vivo.",
       "cta": "Ver todos los módulos y demo"
     },
     "workflowsTeaser": {
@@ -43,9 +42,9 @@
     },
     "servicesTeaser": {
       "eyebrow": "Servicios",
-      "title": "Tú tienes el código. Nosotros hacemos el trabajo.",
-      "sub": "Instalación, personalización y operación en tu propio VPS.",
-      "cta": "Ver precios y qué incluye"
+      "title": "Tú tienes el código.",
+      "sub": "¿Necesitas ayuda para empezar o personalizar? Envíanos un email — lo adaptamos a lo que necesitas.",
+      "cta": "Enviar email"
     },
     "whyTeaser": {
       "eyebrow": "Por qué",
@@ -192,55 +191,44 @@
   },
   "services": {
     "label": "Servicios",
-    "title": "Tú tienes el código. Nosotros hacemos el trabajo.",
-    "sub": "El software es gratis. Nuestro tiempo no.",
-    "tiers": {
-      "install": {
-        "name": "Instalación",
-        "tagline": "Operativo en una semana.",
-        "desc": "Desplegamos open-crm en tu propio VPS, conectamos el correo, importamos clientes y formamos al equipo.",
-        "price": "Desde 18 000 SEK",
-        "priceNote": "Pago único",
-        "include1": "Instalación y configuración del VPS",
-        "include2": "Integración de correo (Zoho o Gmail)",
-        "include3": "Migración desde tu sistema actual",
-        "include4": "Formación al equipo (3 horas)",
-        "include5": "30 días de soporte prioritario",
-        "cta": "Reservar llamada"
+    "title": "Ayuda personalizada, adaptada a lo que necesitas",
+    "sub": "Sin lista de precios, sin suscripción. Solo un email para entender qué necesitas — y una solución adaptada a ti.",
+    "areas": {
+      "installation": {
+        "title": "Instalación y puesta en marcha",
+        "desc": "Desplegamos open-crm en tu propio VPS y lo configuramos todo para que puedas empezar a trabajar enseguida."
       },
-      "customize": {
-        "name": "Personalización",
-        "tagline": "Construye lo que falta.",
-        "desc": "Módulos a medida, integraciones con tus sistemas, informes y flujos personalizados.",
-        "price": "Por proyecto",
-        "priceNote": "Presupuesto tras llamada",
-        "include1": "Análisis de requisitos y diseño técnico",
-        "include2": "Implementación de nuevos módulos",
-        "include3": "Integración con Fortnox, Visma, Hogia y más",
-        "include4": "Plantillas PDF e informes a medida",
-        "include5": "Todo el código fuente es tuyo",
-        "popular": "Más popular",
-        "cta": "Cuéntanos qué necesitas"
+      "customization": {
+        "title": "Personalización y nuevos módulos",
+        "desc": "Funcionalidades y módulos a medida que encajan con cómo trabaja tu empresa."
       },
-      "maintain": {
-        "name": "Operación y Soporte",
-        "tagline": "Vigilamos por ti.",
-        "desc": "Mantenemos el sistema actualizado, monitorizado en seguridad, y respondemos cuando algo falla.",
-        "price": "Desde 2 400 SEK / mes",
-        "priceNote": "Cuota mensual",
-        "include1": "Actualizaciones de seguridad semanales",
-        "include2": "Monitorización 24/7",
-        "include3": "Soporte prioritario en menos de 4 horas",
-        "include4": "Informe de estado mensual",
-        "include5": "Backup y recuperación",
-        "cta": "Iniciar suscripción"
+      "integration": {
+        "title": "Integraciones",
+        "desc": "Conexión con Fortnox, Visma, Hogia, proveedores de email u otros sistemas que ya uses."
+      },
+      "support": {
+        "title": "Soporte técnico",
+        "desc": "Ayuda cuando algo falla. Diagnóstico, actualizaciones y parches de seguridad cuando los necesites."
+      },
+      "training": {
+        "title": "Formación",
+        "desc": "Onboarding para el equipo: todos se ponen al día rápido y aprovechan el sistema al máximo."
+      },
+      "migration": {
+        "title": "Migración",
+        "desc": "Traemos los datos desde tu sistema actual — clientes, proyectos, facturas, documentos."
       }
+    },
+    "cta": {
+      "title": "Contacta con nosotros",
+      "sub": "Cuéntanos qué necesitas y encontramos la solución adecuada. Sin paquetes, sin lista de precios — solo un email.",
+      "button": "Enviar email"
     }
   },
   "finalCta": {
-    "title": "30 minutos. Sin rodeos.",
-    "sub": "Te enseñamos el sistema, escuchamos lo que necesitas, te damos un presupuesto directo. Puedes decir que no cuando quieras.",
-    "cta": "Reservar demo",
+    "title": "Contacta con nosotros",
+    "sub": "Escríbenos a hello@open-crm.org. Cuéntanos qué necesitas — te responderemos con una propuesta concreta, sin paquetes ni lista de precios.",
+    "cta": "Enviar email",
     "secondary": "O hazlo tú mismo: lee la documentación"
   },
   "footer": {

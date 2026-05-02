@@ -1,40 +1,31 @@
-import { Check, ArrowRight } from 'lucide-react'
+import {
+  Settings,
+  Wrench,
+  Plug,
+  Headphones,
+  GraduationCap,
+  ArrowRightLeft,
+  Mail,
+  ArrowRight,
+  type LucideIcon,
+} from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
-const TIERS = [
-  {
-    key: 'install' as const,
-    popular: false,
-    includeKeys: [
-      'include1',
-      'include2',
-      'include3',
-      'include4',
-      'include5',
-    ] as const,
-  },
-  {
-    key: 'customize' as const,
-    popular: true,
-    includeKeys: [
-      'include1',
-      'include2',
-      'include3',
-      'include4',
-      'include5',
-    ] as const,
-  },
-  {
-    key: 'maintain' as const,
-    popular: false,
-    includeKeys: [
-      'include1',
-      'include2',
-      'include3',
-      'include4',
-      'include5',
-    ] as const,
-  },
+type AreaKey =
+  | 'installation'
+  | 'customization'
+  | 'integration'
+  | 'support'
+  | 'training'
+  | 'migration'
+
+const AREAS: Array<{ key: AreaKey; icon: LucideIcon }> = [
+  { key: 'installation', icon: Settings },
+  { key: 'customization', icon: Wrench },
+  { key: 'integration', icon: Plug },
+  { key: 'support', icon: Headphones },
+  { key: 'training', icon: GraduationCap },
+  { key: 'migration', icon: ArrowRightLeft },
 ]
 
 export function ServicesSection() {
@@ -43,84 +34,52 @@ export function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative scroll-mt-24 border-t border-border py-16 md:py-32"
+      className="relative scroll-mt-24 border-t border-border py-12 md:py-24"
     >
       <div className="container-x">
         <header className="mx-auto max-w-2xl text-center">
           <p className="eyebrow justify-center">{t('label')}</p>
-          <h2 className="mt-5 text-balance text-[26px] font-semibold tracking-tight text-fg-strong sm:text-4xl md:text-5xl">
+          <h2 className="mt-3 text-balance text-2xl font-semibold tracking-tight text-fg-strong sm:text-3xl md:mt-5 md:text-[44px]">
             <span className="headline-gradient">{t('title')}</span>
           </h2>
-          <p className="mx-auto mt-5 max-w-xl text-base text-muted text-balance">
+          <p className="mx-auto mt-3 max-w-xl text-sm text-muted text-balance md:mt-5 md:text-base">
             {t('sub')}
           </p>
         </header>
 
-        <div className="mt-14 grid grid-cols-1 gap-5 md:grid-cols-3">
-          {TIERS.map((tier) => {
-            const tierT = (k: string) => t(`tiers.${tier.key}.${k}`)
-            return (
-              <div
-                key={tier.key}
-                className={`relative flex flex-col rounded-2xl border p-5 transition-all duration-300 md:p-7 ${
-                  tier.popular
-                    ? 'border-accent/40 bg-gradient-to-b from-accent/5 to-transparent shadow-2xl shadow-accent/5'
-                    : 'border-border bg-bg-elevated hover:border-border-strong'
-                }`}
-              >
-                {tier.popular && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full border border-accent/40 bg-bg-elevated px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-accent-soft">
-                    {t('tiers.customize.popular')}
-                  </span>
-                )}
-
-                <div className="space-y-1.5">
-                  <h3 className="text-xl font-semibold text-fg-strong">
-                    {tierT('name')}
-                  </h3>
-                  <p className="text-sm text-accent-soft">
-                    {tierT('tagline')}
-                  </p>
-                </div>
-
-                <p className="mt-4 text-sm leading-relaxed text-muted">
-                  {tierT('desc')}
-                </p>
-
-                <div className="mt-6 border-y border-border py-5">
-                  <p className="text-2xl font-semibold tracking-tight text-fg-strong">
-                    {tierT('price')}
-                  </p>
-                  <p className="mt-1 font-mono text-[11px] uppercase tracking-widest text-subtle">
-                    {tierT('priceNote')}
-                  </p>
-                </div>
-
-                <ul className="mt-5 space-y-2.5 md:mt-6 md:space-y-3">
-                  {tier.includeKeys.map((k) => (
-                    <li key={k} className="flex items-start gap-2.5 text-sm">
-                      <Check
-                        size={15}
-                        className="mt-0.5 shrink-0 text-accent-soft"
-                        strokeWidth={2.25}
-                      />
-                      <span className="text-fg">{tierT(k)}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <a
-                  href="mailto:hello@open-crm.org"
-                  className={`mt-8 w-full ${
-                    tier.popular ? 'btn btn-primary' : 'btn btn-ghost'
-                  }`}
-                >
-                  {tierT('cta')}
-                  <ArrowRight size={15} />
-                </a>
+        {/* Areas grid */}
+        <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 md:mt-14 md:grid-cols-3 md:gap-4">
+          {AREAS.map(({ key, icon: Icon }) => (
+            <div key={key} className="card flex flex-col p-5 md:p-6">
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg border border-border-strong bg-surface text-accent-soft">
+                <Icon size={18} strokeWidth={1.75} />
               </div>
-            )
-          })}
+              <h3 className="text-base font-semibold text-fg-strong">
+                {t(`areas.${key}.title`)}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted">
+                {t(`areas.${key}.desc`)}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Consultation CTA block */}
+        <div className="mx-auto mt-12 max-w-2xl rounded-2xl border border-accent/30 bg-gradient-to-b from-accent/5 to-transparent p-6 text-center md:mt-16 md:p-8">
+          <h3 className="text-xl font-semibold text-fg-strong sm:text-2xl">
+            {t('cta.title')}
+          </h3>
+          <p className="mx-auto mt-3 max-w-md text-sm text-muted text-balance md:text-base">
+            {t('cta.sub')}
+          </p>
+          <a
+            href="mailto:hello@open-crm.org"
+            className="btn btn-primary mt-6 !h-11 !text-sm md:!text-base"
+          >
+            <Mail size={15} />
+            {t('cta.button')}
+            <ArrowRight size={15} />
+          </a>
         </div>
       </div>
     </section>

@@ -7,7 +7,7 @@
     "services": "Services",
     "why": "Why",
     "github": "GitHub",
-    "book": "Book a call"
+    "book": "Email us"
   },
   "hero": {
     "badge": "Open source · MIT licensed",
@@ -32,7 +32,6 @@
     "modulesTeaser": {
       "eyebrow": "Modules",
       "title": "From first contact to paid invoice",
-      "sub": "Eight modules in one natural flow. Not a mockup — run them live.",
       "cta": "See all modules & demo"
     },
     "workflowsTeaser": {
@@ -43,9 +42,9 @@
     },
     "servicesTeaser": {
       "eyebrow": "Services",
-      "title": "You own the code. We do the work.",
-      "sub": "Installation, customization and ops on your own VPS.",
-      "cta": "See pricing & what's included"
+      "title": "You own the code.",
+      "sub": "Need help getting started or customizing? Send us an email — we tailor it to your needs.",
+      "cta": "Email us"
     },
     "whyTeaser": {
       "eyebrow": "Why",
@@ -192,55 +191,44 @@
   },
   "services": {
     "label": "Services",
-    "title": "You own the code. We do the work.",
-    "sub": "Software is free. Our time isn't.",
-    "tiers": {
-      "install": {
-        "name": "Installation",
-        "tagline": "Up and running in a week.",
-        "desc": "We deploy open-crm on your own VPS, connect email, import customers and train the team.",
-        "price": "From 18 000 SEK",
-        "priceNote": "One-off",
-        "include1": "VPS installation and configuration",
-        "include2": "Email integration (Zoho or Gmail)",
-        "include3": "Data migration from your current system",
-        "include4": "Team training (3 hours)",
-        "include5": "30 days priority support",
-        "cta": "Book a call"
+    "title": "Personal help, tailored to your needs",
+    "sub": "No price list, no subscription. Just an email to understand what you need — and a solution tailored to you.",
+    "areas": {
+      "installation": {
+        "title": "Installation and setup",
+        "desc": "We deploy open-crm on your own VPS and configure everything so you can start working right away."
       },
-      "customize": {
-        "name": "Customization",
-        "tagline": "Build what's missing.",
-        "desc": "Custom modules, integrations with your existing systems, tailored reports and flows.",
-        "price": "Per project",
-        "priceNote": "Quote after call",
-        "include1": "Requirements analysis and technical design",
-        "include2": "Implementation of new modules",
-        "include3": "Integration with Fortnox, Visma, Hogia and more",
-        "include4": "Custom PDF templates and reports",
-        "include5": "All source code belongs to you",
-        "popular": "Most popular",
-        "cta": "Tell us what you need"
+      "customization": {
+        "title": "Customizations and new modules",
+        "desc": "Tailored features and modules that match exactly how your company works."
       },
-      "maintain": {
-        "name": "Operations & Support",
-        "tagline": "We watch so you don't have to.",
-        "desc": "We keep the system up to date, security-monitored, and respond when something breaks.",
-        "price": "From 2 400 SEK / month",
-        "priceNote": "Monthly fee",
-        "include1": "Weekly security updates",
-        "include2": "24/7 monitoring",
-        "include3": "Priority support within 4 hours",
-        "include4": "Monthly status report",
-        "include5": "Backup and recovery",
-        "cta": "Start subscription"
+      "integration": {
+        "title": "Integrations",
+        "desc": "Connections to Fortnox, Visma, Hogia, email providers or any other system you already use."
+      },
+      "support": {
+        "title": "Technical support",
+        "desc": "Help when something breaks. Troubleshooting, updates and security patching when you need it."
+      },
+      "training": {
+        "title": "Training",
+        "desc": "Onboarding for the team so everyone gets up to speed quickly and uses the system to its full potential."
+      },
+      "migration": {
+        "title": "Migration",
+        "desc": "Move data from your current system — customers, projects, invoices, documents."
       }
+    },
+    "cta": {
+      "title": "Get in touch",
+      "sub": "Tell us what you need and we'll find the right solution. No packages, no price list — just an email.",
+      "button": "Send email"
     }
   },
   "finalCta": {
-    "title": "30 minutes. No nonsense.",
-    "sub": "We show the system, listen, give you a straight quote. Say no whenever you want.",
-    "cta": "Book demo",
+    "title": "Get in touch",
+    "sub": "Write to us at hello@open-crm.org. Tell us what you need — we'll come back with a concrete proposal, no packages or price list.",
+    "cta": "Send email",
     "secondary": "Or run it yourself: read the docs"
   },
   "footer": {

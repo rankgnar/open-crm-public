@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar } from 'lucide-react'
+import { ArrowRight, Mail } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
 export function FinalCTA() {
@@ -27,7 +27,7 @@ export function FinalCTA() {
 
           <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row md:mt-10">
             <a href="mailto:hello@open-crm.org" className="btn btn-primary w-full !h-11 !px-5 !text-sm sm:w-auto md:!h-12 md:!px-7 md:!text-base">
-              <Calendar size={15} />
+              <Mail size={15} />
               {t('cta')}
               <ArrowRight size={15} />
             </a>
