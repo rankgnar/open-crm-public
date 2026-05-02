@@ -28,6 +28,32 @@
     "mockBudget": "Budget",
     "mockSpent": "Spent"
   },
+  "home": {
+    "modulesTeaser": {
+      "eyebrow": "Modules",
+      "title": "From first contact to paid invoice",
+      "sub": "Eight modules in one natural flow. Not a mockup — run them live.",
+      "cta": "See all modules & demo"
+    },
+    "workflowsTeaser": {
+      "eyebrow": "Workflows · AI",
+      "title": "Build your own automation. Without code.",
+      "sub": "Visual node editor. Plug in Claude, OpenAI or your own model.",
+      "cta": "Learn more about Workflows"
+    },
+    "servicesTeaser": {
+      "eyebrow": "Services",
+      "title": "You own the code. We do the work.",
+      "sub": "Installation, customization and ops on your own VPS.",
+      "cta": "See pricing & what's included"
+    },
+    "whyTeaser": {
+      "eyebrow": "Why",
+      "title": "Stop renting. Start owning.",
+      "sub": "MIT licensed. Your data, your server, your code — forever.",
+      "cta": "Our philosophy"
+    }
+  },
   "trust": {
     "title": "Built on what doesn't break",
     "items": {

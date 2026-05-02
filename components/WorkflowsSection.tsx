@@ -1,6 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
+import { Link } from '@/lib/i18n/navigation'
 import {
   Zap,
   Database,
@@ -85,9 +86,9 @@ export function WorkflowsSection() {
             </div>
 
             <div className="mt-10 flex flex-wrap items-center gap-3">
-              <a href="#preview" className="btn btn-primary !h-10 !text-sm">
+              <Link href="/produkten" className="btn btn-primary !h-10 !text-sm">
                 <Workflow size={14} /> {t('cta')}
-              </a>
+              </Link>
               <span className="text-xs text-subtle">{t('tagline')}</span>
             </div>
           </div>

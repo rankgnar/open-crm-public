@@ -66,14 +66,16 @@ const NAV_ALSO: AlsoItem[] = [
 export function ProductFrame({
   active,
   children,
-  height = 560,
+  height,
 }: {
   active: ActiveSection
   children: React.ReactNode
+  /** Optional desktop (lg+) height in px. Mobile/tablet are fixed responsive. */
   height?: number
 }) {
   const tTabs = useTranslations('preview.tabs')
   const tFrame = useTranslations('preview.frame')
+  const lgHeight = height ? `${height}px` : '620px'
   return (
     <div className="relative w-full">
       {/* Glow */}
@@ -84,7 +86,7 @@ export function ProductFrame({
 
       {/* Window */}
       <div
-        className="relative overflow-hidden rounded-2xl border border-border-strong shadow-2xl shadow-black/60"
+        className="relative overflow-hidden rounded-xl border border-border-strong shadow-2xl shadow-black/60 lg:rounded-2xl"
         style={{
           backgroundColor: 'var(--color-app-bg)',
           color: 'var(--color-fg)',
@@ -106,11 +108,14 @@ export function ProductFrame({
           <div className="w-12" />
         </div>
 
-        {/* Body */}
-        <div className="flex" style={{ height }}>
-          {/* Sidebar */}
+        {/* Body — taller on desktop, compact-but-tappable on mobile */}
+        <div
+          className="flex h-[520px] md:h-[580px] lg:h-[var(--frame-h)]"
+          style={{ ['--frame-h' as string]: lgHeight }}
+        >
+          {/* Sidebar — hidden on mobile so the content area takes full width */}
           <aside
-            className="flex w-14 shrink-0 flex-col border-r border-border"
+            className="hidden w-14 shrink-0 flex-col border-r border-border md:flex"
             style={{ backgroundColor: 'var(--color-app-sidebar)' }}
           >
             <div className="flex h-10 items-center justify-end pr-2">

@@ -70,17 +70,17 @@ export function ProjektView() {
   return (
     <div className="flex h-full flex-col">
       {/* Header */}
-      <div className="flex shrink-0 items-center justify-between gap-4 border-b border-border bg-sidebar px-6 py-3">
+      <div className="flex shrink-0 flex-wrap items-center justify-between gap-2 border-b border-border bg-sidebar px-4 py-3 md:flex-nowrap md:gap-4 md:px-6">
         <div className="flex min-w-0 flex-1 items-center gap-3">
           <button className="flex shrink-0 items-center gap-1.5 text-sm text-muted transition-colors hover:text-fg">
             <ArrowLeft size={14} />
             Projekt
           </button>
           <span className="shrink-0 text-subtle">/</span>
-          <span className="shrink-0 truncate text-sm font-medium text-fg">
+          <span className="min-w-0 shrink truncate text-sm font-medium text-fg">
             {projekt.projekt_nummer} — {projekt.namn}
           </span>
-          <div className="flex min-w-0 items-center overflow-x-auto">
+          <div className="hidden min-w-0 items-center overflow-x-auto md:flex">
             {STATUSAR.map((s, i) => {
               const active = s.namn === currentStatus
               return (
@@ -108,7 +108,7 @@ export function ProjektView() {
             })}
           </div>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="hidden items-center gap-2 sm:flex">
           <button className="flex items-center gap-1.5 rounded-lg border border-border bg-elevated px-3 py-1.5 text-xs text-fg transition-colors hover:bg-hover">
             <Pencil size={12} /> Redigera
           </button>
@@ -123,7 +123,7 @@ export function ProjektView() {
         {/* Main column */}
         <div className="flex flex-1 flex-col overflow-auto">
           {/* Title block */}
-          <div className="border-b border-border px-8 py-6">
+          <div className="border-b border-border px-4 py-5 md:px-6 md:py-6 lg:px-8">
             <p className="mb-0.5 text-[11px] uppercase tracking-widest text-muted">
               {projekt.projekt_nummer}
             </p>
@@ -179,7 +179,7 @@ export function ProjektView() {
           </DetailSection>
 
           {/* Meta footer */}
-          <div className="mt-auto flex items-center gap-6 border-t border-border px-8 py-4">
+          <div className="mt-auto flex flex-wrap items-center gap-x-6 gap-y-1 border-t border-border px-4 py-4 md:px-6 lg:px-8">
             <span className="text-xs text-subtle">
               Skapad:{' '}
               <span className="text-muted">{fmtDate(projekt.skapad_at)}</span>
@@ -191,8 +191,8 @@ export function ProjektView() {
           </div>
         </div>
 
-        {/* Right panel */}
-        <div className="flex w-[360px] shrink-0 flex-col border-l border-border">
+        {/* Right panel — desktop only, hidden under lg to keep main column readable */}
+        <div className="hidden w-[320px] shrink-0 flex-col border-l border-border lg:flex xl:w-[360px]">
           <div className="flex shrink-0 border-b border-border">
             {(
               [

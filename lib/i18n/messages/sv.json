@@ -28,6 +28,32 @@
     "mockBudget": "Budget",
     "mockSpent": "Förbrukat"
   },
+  "home": {
+    "modulesTeaser": {
+      "eyebrow": "Moduler",
+      "title": "Från första kontakt till betald faktura",
+      "sub": "Åtta moduler i ett naturligt flöde. Ingen ren mockup — kör dem live.",
+      "cta": "Se alla moduler & demo"
+    },
+    "workflowsTeaser": {
+      "eyebrow": "Workflows · AI",
+      "title": "Bygg din egen automation. Utan kod.",
+      "sub": "Visuell node-editor. Plug in Claude, OpenAI eller egen modell.",
+      "cta": "Lär mer om Workflows"
+    },
+    "servicesTeaser": {
+      "eyebrow": "Tjänster",
+      "title": "Du äger koden. Vi gör jobbet.",
+      "sub": "Installation, anpassning och drift på din egen VPS.",
+      "cta": "Se priser & vad som ingår"
+    },
+    "whyTeaser": {
+      "eyebrow": "Varför",
+      "title": "Sluta hyra. Börja äga.",
+      "sub": "MIT-licens. Din data, din server, din kod — för alltid.",
+      "cta": "Vår filosofi"
+    }
+  },
   "trust": {
     "title": "Byggt på det som inte går sönder",
     "items": {

@@ -28,23 +28,23 @@ export function PersonalView() {
   return (
     <div className="flex h-full flex-col">
       {/* Header */}
-      <div className="flex shrink-0 items-center gap-4 border-b border-border bg-sidebar px-6 py-3">
+      <div className="flex shrink-0 flex-wrap items-center gap-2 border-b border-border bg-sidebar px-4 py-3 md:flex-nowrap md:gap-4 md:px-6">
         <h1 className="shrink-0 text-base font-semibold text-fg">Personal</h1>
         <span className="rounded-full border border-border bg-elevated px-2 py-0.5 text-xs text-muted">
           {personalMembers.length}
         </span>
-        <div className="relative ml-2 max-w-xs flex-1">
+        <div className="relative ml-1 min-w-0 flex-1 md:ml-2 md:max-w-xs">
           <Search
             size={13}
             className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-subtle"
           />
           <input
             className="input w-full pl-8 text-sm"
-            placeholder="Sök personal..."
+            placeholder="Sök..."
             readOnly
           />
         </div>
-        <div className="flex items-center gap-1 rounded-md border border-border bg-elevated p-0.5">
+        <div className="hidden items-center gap-1 rounded-md border border-border bg-elevated p-0.5 lg:flex">
           {(['Översikt', 'Tidrapporter', 'Ledighet', 'Löner'] as const).map(
             (v, i) => (
               <button
@@ -58,13 +58,13 @@ export function PersonalView() {
             ),
           )}
         </div>
-        <button className="ml-auto flex shrink-0 items-center gap-1.5 rounded-lg border border-border bg-elevated px-3 py-1.5 text-sm text-fg transition-colors hover:bg-hover">
+        <button className="ml-auto hidden shrink-0 items-center gap-1.5 rounded-lg border border-border bg-elevated px-3 py-1.5 text-sm text-fg transition-colors hover:bg-hover sm:flex">
           <Plus size={14} /> Anställ
         </button>
       </div>
 
       {/* KPI strip */}
-      <div className="grid shrink-0 grid-cols-4 border-b border-border bg-sidebar">
+      <div className="grid shrink-0 grid-cols-2 border-b border-border bg-sidebar md:grid-cols-4">
         <Kpi label="Aktiva" value={aktiva} />
         <Kpi label="Lediga idag" value={lediga} color="text-blue-400" />
         <Kpi

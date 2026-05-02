@@ -96,30 +96,30 @@ export function WorkflowsView() {
   return (
     <div className="flex h-full flex-col">
       {/* Header */}
-      <div className="flex shrink-0 items-center justify-between gap-4 border-b border-border bg-sidebar px-6 py-3">
+      <div className="flex shrink-0 flex-wrap items-center justify-between gap-2 border-b border-border bg-sidebar px-4 py-3 md:flex-nowrap md:gap-4 md:px-6">
         <div className="flex min-w-0 items-center gap-3">
           <h1 className="shrink-0 text-base font-semibold text-fg">Workflows</h1>
           <span className="shrink-0 text-subtle">/</span>
-          <span className="truncate text-sm text-fg">{wf.namn}</span>
-          <div className="flex shrink-0 items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-2.5 py-0.5">
+          <span className="min-w-0 truncate text-sm text-fg">{wf.namn}</span>
+          <div className="hidden shrink-0 items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-2.5 py-0.5 sm:flex">
             <span className="size-1.5 animate-pulse rounded-full bg-emerald-400" />
             <span className="text-[11px] text-emerald-400">Aktiv</span>
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <button className="flex items-center gap-1.5 rounded-lg border border-border bg-elevated px-3 py-1.5 text-xs text-fg transition-colors hover:bg-hover">
+          <button className="hidden items-center gap-1.5 rounded-lg border border-border bg-elevated px-3 py-1.5 text-xs text-fg transition-colors hover:bg-hover sm:flex">
             <Pause size={12} /> Pausa
           </button>
           <button className="flex items-center gap-1.5 rounded-lg bg-fg px-3 py-1.5 text-xs font-medium text-bg transition-opacity hover:opacity-90">
-            <Play size={12} /> Kör manuellt
+            <Play size={12} /> <span className="hidden sm:inline">Kör manuellt</span><span className="sm:hidden">Kör</span>
           </button>
         </div>
       </div>
 
       {/* Body */}
       <div className="flex min-h-0 flex-1">
-        {/* Left list */}
-        <aside className="flex w-52 shrink-0 flex-col border-r border-border bg-sidebar">
+        {/* Left list — hidden on small screens; canvas takes full width */}
+        <aside className="hidden w-52 shrink-0 flex-col border-r border-border bg-sidebar lg:flex">
           <div className="flex items-center justify-between border-b border-border px-4 py-3">
             <span className="text-[11px] font-semibold uppercase tracking-wider text-muted">
               Mina flöden

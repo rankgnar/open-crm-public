@@ -97,8 +97,8 @@ export function KalenderView() {
   return (
     <div className="flex h-full flex-col">
       {/* Header */}
-      <div className="flex shrink-0 items-center gap-4 border-b border-border bg-sidebar px-6 py-3">
-        <h1 className="text-base font-semibold text-fg">Schema</h1>
+      <div className="flex shrink-0 flex-wrap items-center gap-2 border-b border-border bg-sidebar px-4 py-3 md:flex-nowrap md:gap-4 md:px-6">
+        <h1 className="text-base font-semibold text-fg">Kalender</h1>
 
         <div className="flex items-center gap-1">
           <button
@@ -107,7 +107,7 @@ export function KalenderView() {
           >
             <ChevronLeft size={14} />
           </button>
-          <span className="min-w-[140px] text-center text-sm font-medium text-fg">
+          <span className="min-w-[120px] text-center text-sm font-medium text-fg md:min-w-[140px]">
             {MANADER[month]} {year}
           </span>
           <button
@@ -118,7 +118,7 @@ export function KalenderView() {
           </button>
         </div>
 
-        <div className="flex items-center gap-1 rounded-md border border-border bg-elevated p-0.5">
+        <div className="hidden items-center gap-1 rounded-md border border-border bg-elevated p-0.5 md:flex">
           {(['Månad', 'Vecka', 'Dag'] as const).map((v, i) => (
             <button
               key={v}
@@ -131,7 +131,7 @@ export function KalenderView() {
           ))}
         </div>
 
-        <div className="ml-auto flex items-center gap-3">
+        <div className="ml-auto hidden items-center gap-3 lg:flex">
           {Object.entries(TYP).map(([k, v]) => (
             <div key={k} className="flex items-center gap-1.5 text-[11px] text-muted">
               <span className={`size-1.5 rounded-full ${v.color.replace('text-', 'bg-')}`} />
@@ -140,8 +140,8 @@ export function KalenderView() {
           ))}
         </div>
 
-        <button className="flex items-center gap-1.5 rounded-lg border border-border bg-elevated px-3 py-1.5 text-sm text-fg transition-colors hover:bg-hover">
-          <Plus size={14} /> Ny händelse
+        <button className="ml-auto flex items-center gap-1.5 rounded-lg border border-border bg-elevated px-3 py-1.5 text-sm text-fg transition-colors hover:bg-hover lg:ml-0">
+          <Plus size={14} /> <span className="hidden sm:inline">Ny händelse</span>
         </button>
       </div>
 
@@ -223,8 +223,8 @@ export function KalenderView() {
           </div>
         </div>
 
-        {/* Right panel — selected event */}
-        <div className="flex w-[300px] shrink-0 flex-col border-l border-border bg-sidebar">
+        {/* Right panel — selected event (desktop only, would overflow mobile) */}
+        <div className="hidden w-[300px] shrink-0 flex-col border-l border-border bg-sidebar lg:flex">
           {selected ? (
             <>
               <div className="border-b border-border px-5 py-4">

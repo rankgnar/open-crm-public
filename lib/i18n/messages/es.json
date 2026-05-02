@@ -28,6 +28,32 @@
     "mockBudget": "Presupuesto",
     "mockSpent": "Consumido"
   },
+  "home": {
+    "modulesTeaser": {
+      "eyebrow": "Módulos",
+      "title": "Del primer contacto a la factura cobrada",
+      "sub": "Ocho módulos en un flujo natural. No un mockup — pruébalos en vivo.",
+      "cta": "Ver todos los módulos y demo"
+    },
+    "workflowsTeaser": {
+      "eyebrow": "Workflows · IA",
+      "title": "Construye tu propia automatización. Sin código.",
+      "sub": "Editor visual de nodos. Conecta Claude, OpenAI o tu modelo.",
+      "cta": "Saber más sobre Workflows"
+    },
+    "servicesTeaser": {
+      "eyebrow": "Servicios",
+      "title": "Tú tienes el código. Nosotros hacemos el trabajo.",
+      "sub": "Instalación, personalización y operación en tu propio VPS.",
+      "cta": "Ver precios y qué incluye"
+    },
+    "whyTeaser": {
+      "eyebrow": "Por qué",
+      "title": "Deja de alquilar. Empieza a poseer.",
+      "sub": "Licencia MIT. Tus datos, tu servidor, tu código — para siempre.",
+      "cta": "Nuestra filosofía"
+    }
+  },
   "trust": {
     "title": "Construido sobre lo que no se rompe",
     "items": {

@@ -42,7 +42,7 @@ export function LiveDemo() {
   const [active, setActive] = useState<ActiveSection>('kunder')
 
   return (
-    <section id="preview" className="relative hidden scroll-mt-24 py-16 md:py-32 lg:block">
+    <section id="preview" className="relative scroll-mt-24 py-12 md:py-20 lg:py-32">
       <div
         aria-hidden
         className="absolute left-1/2 top-0 h-[600px] w-[1100px] -translate-x-1/2 bg-[radial-gradient(ellipse_50%_50%_at_50%_0%,rgba(52,211,153,0.10),transparent_70%)]"
@@ -86,28 +86,22 @@ export function LiveDemo() {
           </div>
         </div>
 
-        {/* Frame with active view — horizontally scrollable on mobile */}
-        <div className="-mx-5 mt-10 overflow-x-auto pb-3 [scrollbar-width:none] sm:mx-0 lg:overflow-visible lg:pb-0 [&::-webkit-scrollbar]:hidden">
-          <div className="px-5 sm:px-0">
-            <div className="min-w-[1020px] lg:min-w-0">
-              <ProductFrame active={active} height={620}>
-                {active === 'kunder' && <KunderView />}
-                {active === 'projekt' && <ProjektView />}
-                {active === 'forslag' && <ForslagView />}
-                {active === 'workflows' && <WorkflowsView />}
-                {active === 'kalender' && <KalenderView />}
-                {active === 'ekonomi' && <EkonomiView />}
-                {active === 'personal' && <PersonalView />}
-                {active === 'chat' && <ChatView />}
-              </ProductFrame>
-            </div>
-          </div>
+        {/* Frame with active view — fits viewport, sidebar collapses on mobile */}
+        <div className="mt-8 md:mt-10">
+          <ProductFrame active={active}>
+            {active === 'kunder' && <KunderView />}
+            {active === 'projekt' && <ProjektView />}
+            {active === 'forslag' && <ForslagView />}
+            {active === 'workflows' && <WorkflowsView />}
+            {active === 'kalender' && <KalenderView />}
+            {active === 'ekonomi' && <EkonomiView />}
+            {active === 'personal' && <PersonalView />}
+            {active === 'chat' && <ChatView />}
+          </ProductFrame>
         </div>
 
-        <p className="mx-auto mt-8 flex max-w-xl items-center justify-center gap-2 text-center text-xs text-subtle">
-          <span aria-hidden className="sm:hidden">←</span>
-          <span>{t('hint')}</span>
-          <span aria-hidden className="sm:hidden">→</span>
+        <p className="mx-auto mt-8 max-w-xl text-center text-xs text-subtle">
+          {t('hint')}
         </p>
       </div>
     </section>

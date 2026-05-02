@@ -3,6 +3,7 @@
 import { ArrowRight, Github, Copy, Check } from 'lucide-react'
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
+import { Link } from '@/lib/i18n/navigation'
 import { ProductFrame } from './preview/ProductFrame'
 import { WorkspaceView } from './preview/views/WorkspaceView'
 
@@ -79,10 +80,10 @@ export function Hero() {
               className="mt-7 flex flex-col gap-3 animate-fade-up sm:flex-row sm:flex-wrap sm:items-center"
               style={{ animationDelay: '240ms' }}
             >
-              <a href="#services" className="btn btn-primary w-full sm:w-auto">
+              <Link href="/tjanster" className="btn btn-primary w-full sm:w-auto">
                 {t('ctaPrimary')}
                 <ArrowRight size={15} />
-              </a>
+              </Link>
               <a
                 href={GITHUB_URL}
                 target="_blank"
