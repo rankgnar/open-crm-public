@@ -85,6 +85,21 @@
       "fakturor": "Fakturor",
       "tema": "Tema",
       "installningar": "Inställningar"
+    },
+    "stackIntro": {
+      "eyebrow": "Produkten",
+      "title": "Det här är vad du faktiskt får",
+      "sub": "Bläddra ner. Varje vy är ett av modulerna i open-crm — riktig kod, fiktiv data, samma utseende som i den färdiga appen."
+    },
+    "viewDescriptions": {
+      "kunder": "Företag, personer, kontaktpunkter. Med historik, anteckningar och status.",
+      "projekt": "Detaljvy för ett projekt. Statusflöde, kund, ROT-avdrag, aktivitet.",
+      "forslag": "Offert med faser, arbete, material, ROT-avdrag och totalsummering.",
+      "workflows": "Visuell node-editor: trigger → kontext → AI → åtgärd. Versionerat i Git.",
+      "kalender": "Schema med uppgifter, besök, leveranser och möten — hela teamets kalender.",
+      "ekonomi": "Kostnad mot budget per projekt. Marginal, fakturerat och utestående.",
+      "personal": "Anställda, status, tidrapporter att godkänna och ledighetsansökningar.",
+      "chat": "Intern kommunikation kopplad till team och projekt."
     }
   },
   "workflows": {

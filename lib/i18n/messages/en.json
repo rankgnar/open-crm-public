@@ -85,6 +85,21 @@
       "fakturor": "Invoices",
       "tema": "Theme",
       "installningar": "Settings"
+    },
+    "stackIntro": {
+      "eyebrow": "The product",
+      "title": "This is what you actually get",
+      "sub": "Scroll down. Each view is one of open-crm's modules — real code, fixture data, same look as the shipped app."
+    },
+    "viewDescriptions": {
+      "kunder": "Companies, people, contact points. With history, notes and status.",
+      "projekt": "Project detail view. Status flow, customer, ROT deduction, activity.",
+      "forslag": "Quote with phases, labor, materials, ROT deduction and totals.",
+      "workflows": "Visual node editor: trigger → context → AI → action. Git-versioned.",
+      "kalender": "Schedule with tasks, visits, deliveries and meetings — the team calendar.",
+      "ekonomi": "Cost vs budget per project. Margin, invoiced and outstanding.",
+      "personal": "Staff, status, time reports to approve and time-off requests.",
+      "chat": "Internal communication linked to teams and projects."
     }
   },
   "workflows": {

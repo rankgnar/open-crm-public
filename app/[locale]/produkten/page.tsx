@@ -1,8 +1,7 @@
 import { setRequestLocale } from 'next-intl/server'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
-import { LiveDemo } from '@/components/LiveDemo'
-import { ModulesGrid } from '@/components/ModulesGrid'
+import { LiveDemoStack } from '@/components/LiveDemoStack'
 import { StackSection } from '@/components/StackSection'
 import { FinalCTA } from '@/components/FinalCTA'
 
@@ -18,8 +17,7 @@ export default async function ProduktenPage({
     <>
       <Navbar />
       <main className="overflow-x-hidden pt-16">
-        <LiveDemo />
-        <ModulesGrid />
+        <LiveDemoStack />
         <StackSection />
         <FinalCTA />
       </main>

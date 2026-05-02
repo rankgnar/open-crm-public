@@ -85,6 +85,21 @@
       "fakturor": "Facturas",
       "tema": "Tema",
       "installningar": "Ajustes"
+    },
+    "stackIntro": {
+      "eyebrow": "El producto",
+      "title": "Esto es lo que realmente obtienes",
+      "sub": "Desplázate hacia abajo. Cada vista es uno de los módulos de open-crm — código real, datos ficticios, mismo aspecto que la app final."
+    },
+    "viewDescriptions": {
+      "kunder": "Empresas, personas, contactos. Con historial, notas y estado.",
+      "projekt": "Detalle de proyecto. Flujo de estado, cliente, deducción ROT, actividad.",
+      "forslag": "Presupuesto con fases, mano de obra, materiales, deducción ROT y totales.",
+      "workflows": "Editor visual de nodos: trigger → contexto → IA → acción. Versionado en Git.",
+      "kalender": "Calendario con tareas, visitas, entregas y reuniones — agenda del equipo.",
+      "ekonomi": "Coste frente a presupuesto por proyecto. Margen, facturado y pendiente.",
+      "personal": "Empleados, estado, partes de horas a aprobar y solicitudes de vacaciones.",
+      "chat": "Comunicación interna ligada a equipos y proyectos."
     }
   },
   "workflows": {
