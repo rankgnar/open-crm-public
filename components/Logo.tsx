@@ -14,6 +14,7 @@ export function Logo({ size = 28 }: { size?: number }) {
         height={size}
         priority
         className="rounded-md"
+        style={{ width: size, height: size }}
       />
       {/* Wordmark — light variant for dark theme, dark variant for light theme */}
       <Image
@@ -22,8 +23,8 @@ export function Logo({ size = 28 }: { size?: number }) {
         width={wordmarkWidth}
         height={wordmarkHeight}
         priority
-        className="theme-dark-only block h-auto w-auto"
-        style={{ height: wordmarkHeight }}
+        className="theme-dark-only block"
+        style={{ width: wordmarkWidth, height: wordmarkHeight }}
       />
       <Image
         src="/logo-text-dark.png"
@@ -31,8 +32,8 @@ export function Logo({ size = 28 }: { size?: number }) {
         width={wordmarkWidth}
         height={wordmarkHeight}
         priority
-        className="theme-light-only block h-auto w-auto"
-        style={{ height: wordmarkHeight }}
+        className="theme-light-only block"
+        style={{ width: wordmarkWidth, height: wordmarkHeight }}
       />
     </span>
   )

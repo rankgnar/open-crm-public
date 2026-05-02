@@ -48,7 +48,9 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap"
         />
       </head>
-      <body className="bg-bg text-fg antialiased">{children}</body>
+      <body className="bg-bg text-fg antialiased" suppressHydrationWarning>
+        {children}
+      </body>
     </html>
   )
 }
