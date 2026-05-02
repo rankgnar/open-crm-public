@@ -13,7 +13,7 @@
     "badge": "Open source · MIT licensed",
     "titleLine1": "Your CRM.",
     "titleLine2": "Actually yours.",
-    "sub": "A complete CRM that protects your data. Everything runs on your own server — we share nothing with third parties.",
+    "sub": "A complete CRM that protects your data. Everything runs on your own server.",
     "ctaPrimary": "Book installation",
     "ctaSecondary": "View on GitHub",
     "command": "git clone https://github.com/rankgnar/open-crm-public",
