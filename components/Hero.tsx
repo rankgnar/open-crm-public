@@ -96,9 +96,9 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right: live product frame — desktop only, hidden on mobile/tablet */}
+          {/* Right: live product frame — full UI, scaled to fit on mobile */}
           <div
-            className="hidden animate-fade-up lg:col-span-6 lg:block"
+            className="animate-fade-up lg:col-span-6"
             style={{ animationDelay: '300ms' }}
           >
             <ProductFrame active="workspace" height={460} naturalWidth={640}>
