@@ -138,7 +138,7 @@ const FLOW_NODES: Array<{
   {
     category: 'ai',
     label: 'AI — Generera',
-    summary: 'Offert-skribent · Claude Sonnet 4.6',
+    summary: 'AI-assistent: Offert-skribent',
     status: 'done',
   },
   {
@@ -150,7 +150,7 @@ const FLOW_NODES: Array<{
   {
     category: 'action',
     label: 'Skicka för signatur',
-    summary: 'Mall: offert_signatur · Zoho',
+    summary: 'Mall: offert_signatur',
     status: 'running',
   },
 ]
@@ -196,7 +196,7 @@ function NodeDiagram() {
         <div className="border-b border-border px-4 pb-2 pt-3">
           <p className="text-[11px] text-muted">
             Genererar ett offertförslag från projektdata och skickar för digital
-            signatur via Zoho.
+            signatur.
           </p>
         </div>
 

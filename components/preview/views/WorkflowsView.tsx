@@ -55,7 +55,7 @@ const WORKFLOWS: Workflow[] = [
     namn: 'Offert — AI-utkast → Skicka för signatur',
     kategori: 'Försäljning',
     beskrivning:
-      'Genererar ett offertförslag från projektdata, skapar tidplan och skickar för digital signatur via Zoho.',
+      'Genererar ett offertförslag från projektdata, skapar tidplan och skickar för digital signatur.',
     aktiv: true,
     runs_30d: 47,
     nodes: [
@@ -93,7 +93,7 @@ const WORKFLOWS: Workflow[] = [
         id: 'n6',
         label: 'Skicka e-post',
         category: 'action',
-        summary: 'Mall: offert_signatur · Zoho',
+        summary: 'Mall: offert_signatur',
       },
     ],
   },
