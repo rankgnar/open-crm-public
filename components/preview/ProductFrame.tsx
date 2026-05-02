@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import {
   Home,
   Users,
@@ -69,6 +70,9 @@ const NAV_ALSO: AlsoItem[] = [
 
 const TITLE_BAR_HEIGHT = 36
 
+const useIsoLayoutEffect =
+  typeof window !== 'undefined' ? useLayoutEffect : useEffect
+
 export function ProductFrame({
   active,
   children,
@@ -79,13 +83,29 @@ export function ProductFrame({
   children: React.ReactNode
   /** Natural body height in px. The frame scales down uniformly to fit narrower viewports. */
   height?: number
-  /** Natural app width — frame renders at this width and scales down via CSS when container is narrower. */
+  /** Natural app width — frame renders at this width and scales down to fit narrower containers. */
   naturalWidth?: number
 }) {
   const tTabs = useTranslations('preview.tabs')
   const tFrame = useTranslations('preview.frame')
   const naturalBodyHeight = height ?? 620
   const naturalTotalHeight = naturalBodyHeight + TITLE_BAR_HEIGHT
+
+  const wrapRef = useRef<HTMLDivElement>(null)
+  const [scale, setScale] = useState(1)
+
+  useIsoLayoutEffect(() => {
+    const el = wrapRef.current
+    if (!el) return
+    const update = () => {
+      const w = el.getBoundingClientRect().width
+      setScale(Math.min(1, w / naturalWidth))
+    }
+    update()
+    const observer = new ResizeObserver(update)
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [naturalWidth])
 
   return (
     <div className="relative w-full">
@@ -95,23 +115,23 @@ export function ProductFrame({
         className="absolute -inset-12 rounded-full bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,rgba(52,211,153,0.14),transparent_65%)] blur-3xl"
       />
 
-      {/* Outer wrapper: caps at naturalWidth on desktop, scales down on narrower containers via aspect-ratio. */}
+      {/* Outer wrapper: caps at naturalWidth on desktop, aspect-ratio gives correct height before JS runs. */}
       <div
+        ref={wrapRef}
         className="relative mx-auto overflow-hidden rounded-xl border border-border-strong shadow-2xl shadow-black/60 lg:rounded-2xl"
         style={{
           width: `min(100%, ${naturalWidth}px)`,
           aspectRatio: `${naturalWidth} / ${naturalTotalHeight}`,
-          containerType: 'inline-size',
           backgroundColor: 'var(--color-app-bg)',
           color: 'var(--color-fg)',
         }}
       >
-        {/* Inner: fixed natural size, scaled via container query unit. */}
+        {/* Inner: fixed natural size, scaled via JS-measured ResizeObserver. */}
         <div
           style={{
             width: naturalWidth,
             height: naturalTotalHeight,
-            transform: `scale(min(1, calc(100cqw / ${naturalWidth})))`,
+            transform: `scale(${scale})`,
             transformOrigin: 'top left',
           }}
         >
