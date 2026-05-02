@@ -3,17 +3,17 @@
 import { useTranslations } from 'next-intl'
 import { Link } from '@/lib/i18n/navigation'
 import {
-  Zap,
   Database,
   Sparkles,
-  FileDown,
-  Mail,
-  Save,
+  CheckCircle2,
+  ChevronDown,
   Workflow,
   GitBranch,
   Clock,
   Bot,
-  CheckCircle2,
+  ToggleRight,
+  Play,
+  Loader2,
 } from 'lucide-react'
 
 const FEATURES = [
@@ -103,6 +103,64 @@ export function WorkflowsSection() {
   )
 }
 
+type NodeCategory = 'data' | 'ai' | 'action'
+
+const CAT_BORDER: Record<NodeCategory, string> = {
+  data: 'border-l-blue-400/70',
+  ai: 'border-l-violet-400/70',
+  action: 'border-l-emerald-400/70',
+}
+
+const CAT_ICON_COLOR: Record<NodeCategory, string> = {
+  data: 'text-blue-400',
+  ai: 'text-violet-400',
+  action: 'text-emerald-400',
+}
+
+const FLOW_NODES: Array<{
+  category: NodeCategory
+  label: string
+  summary: string
+  status?: 'done' | 'running'
+}> = [
+  {
+    category: 'data',
+    label: 'Projekt',
+    summary: 'Hämtar projektdata med kund och ROT-inställningar',
+    status: 'done',
+  },
+  {
+    category: 'data',
+    label: 'Projektfiler',
+    summary: '4 dokument · 2 anteckningar',
+    status: 'done',
+  },
+  {
+    category: 'ai',
+    label: 'AI — Generera',
+    summary: 'Offert-skribent · Claude Sonnet 4.6',
+    status: 'done',
+  },
+  {
+    category: 'action',
+    label: 'Skapa förslag',
+    summary: 'Giltig 30 dagar · Moms 25%',
+    status: 'done',
+  },
+  {
+    category: 'action',
+    label: 'Skicka för signatur',
+    summary: 'Mall: offert_signatur · Zoho',
+    status: 'running',
+  },
+]
+
+function CategoryIcon({ category }: { category: NodeCategory }) {
+  if (category === 'data') return <Database size={14} />
+  if (category === 'ai') return <Sparkles size={14} />
+  return <CheckCircle2 size={14} />
+}
+
 function NodeDiagram() {
   return (
     <div className="relative">
@@ -113,183 +171,79 @@ function NodeDiagram() {
 
       <div
         className="relative overflow-hidden rounded-2xl border border-border-strong shadow-2xl shadow-black/40"
-        style={{
-          backgroundColor: 'var(--color-app-bg)',
-          minHeight: 380,
-          backgroundImage:
-            'radial-gradient(circle, var(--color-grid-line) 1px, transparent 1px)',
-          backgroundSize: '20px 20px',
-        }}
+        style={{ backgroundColor: 'var(--color-app-bg)' }}
       >
-        {/* Title strip */}
+        {/* Title bar — matches the real WorkflowEditor header */}
         <div
-          className="flex items-center justify-between border-b border-border px-4 py-2.5"
+          className="flex items-center gap-3 border-b border-border px-4 py-2.5"
           style={{ backgroundColor: 'var(--color-app-sidebar)' }}
         >
-          <div className="flex items-center gap-2">
-            <Workflow size={14} className="text-violet-400" />
-            <span className="text-[12px] font-medium text-fg">
-              Offert → AI-utkast → Skicka
-            </span>
-            <span className="ml-2 inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-2 py-0.5">
-              <span className="size-1.5 animate-pulse rounded-full bg-emerald-400" />
-              <span className="text-[10px] text-emerald-400">Aktiv · 47 körningar 30d</span>
-            </span>
+          <Workflow size={13} className="text-violet-400" />
+          <span className="flex-1 truncate text-[12px] font-semibold text-fg">
+            Offert — AI-utkast → Skicka för signatur
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-2 py-0.5">
+            <span className="size-1.5 animate-pulse rounded-full bg-emerald-400" />
+            <span className="text-[10px] text-emerald-400">47 körningar 30d</span>
+          </span>
+          <ToggleRight size={16} className="text-emerald-400" />
+          <button className="flex items-center gap-1.5 rounded border border-border bg-elevated px-2.5 py-1 text-[11px] text-fg">
+            <Play size={11} /> Kör
+          </button>
+        </div>
+
+        {/* Beskrivning */}
+        <div className="border-b border-border px-4 pb-2 pt-3">
+          <p className="text-[11px] text-muted">
+            Genererar ett offertförslag från projektdata och skickar för digital
+            signatur via Zoho.
+          </p>
+        </div>
+
+        {/* Vertical NodeCard stack */}
+        <div className="px-4 py-5">
+          <div className="mx-auto flex max-w-md flex-col gap-0">
+            {FLOW_NODES.map((n, i) => (
+              <div key={i}>
+                <div
+                  className={`overflow-hidden rounded-lg border border-border border-l-2 bg-elevated ${CAT_BORDER[n.category]}`}
+                >
+                  <div className="flex items-center gap-2.5 px-3 py-2">
+                    <span className={CAT_ICON_COLOR[n.category]}>
+                      <CategoryIcon category={n.category} />
+                    </span>
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate text-[12px] font-medium text-fg">
+                        {n.label}
+                      </p>
+                      <p className="mt-0.5 truncate text-[10.5px] text-muted">
+                        {n.summary}
+                      </p>
+                    </div>
+                    {n.status === 'running' ? (
+                      <Loader2
+                        size={12}
+                        className="shrink-0 animate-spin text-amber-400"
+                      />
+                    ) : (
+                      <CheckCircle2
+                        size={12}
+                        className="shrink-0 text-emerald-400"
+                      />
+                    )}
+                  </div>
+                </div>
+                {i < FLOW_NODES.length - 1 && (
+                  <div className="flex flex-col items-center py-0.5">
+                    <div className="h-4 w-px bg-border" />
+                    <ChevronDown size={12} className="text-subtle" />
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
-          <span className="font-mono text-[10px] text-subtle">96% lyckade</span>
-        </div>
-
-        <svg
-          viewBox="0 0 760 320"
-          className="block w-full"
-          style={{ height: 320 }}
-          preserveAspectRatio="xMidYMid meet"
-        >
-          <defs>
-            <linearGradient id="ws-edge" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor="rgba(167,139,250,0.5)" />
-              <stop offset="100%" stopColor="rgba(52,211,153,0.85)" />
-            </linearGradient>
-            <marker
-              id="ws-arrow"
-              viewBox="0 0 10 10"
-              refX="8"
-              refY="5"
-              markerWidth="5"
-              markerHeight="5"
-              orient="auto"
-            >
-              <path d="M0,0 L10,5 L0,10 z" fill="rgba(52,211,153,0.85)" />
-            </marker>
-          </defs>
-
-          {/* edges */}
-          <path d="M170,160 C200,160 220,160 250,160" stroke="url(#ws-edge)" strokeWidth="1.5" fill="none" markerEnd="url(#ws-arrow)" />
-          <path d="M390,160 C420,160 420,90 450,90" stroke="url(#ws-edge)" strokeWidth="1.5" fill="none" markerEnd="url(#ws-arrow)" />
-          <path d="M390,160 C420,160 420,230 450,230" stroke="url(#ws-edge)" strokeWidth="1.5" fill="none" markerEnd="url(#ws-arrow)" />
-          <path d="M590,90 C620,90 620,160 650,160" stroke="url(#ws-edge)" strokeWidth="1.5" fill="none" markerEnd="url(#ws-arrow)" />
-          <path d="M590,230 C620,230 620,160 650,160" stroke="url(#ws-edge)" strokeWidth="1.5" fill="none" markerEnd="url(#ws-arrow)" />
-        </svg>
-
-        {/* Nodes positioned over the SVG */}
-        <div className="absolute inset-0 pointer-events-none">
-          <DiagramNode
-            icon={Zap}
-            label="Trigger"
-            sub="Status: klar_för_granskning"
-            color="amber"
-            x="3%"
-            y="38%"
-          />
-          <DiagramNode
-            icon={Database}
-            label="Hämta kontext"
-            sub="4 dokument · 2 anteckningar"
-            color="blue"
-            x="32%"
-            y="38%"
-          />
-          <DiagramNode
-            icon={Sparkles}
-            label="AI · Claude Sonnet"
-            sub="Generera följebrev"
-            color="violet"
-            x="59%"
-            y="14%"
-          />
-          <DiagramNode
-            icon={FileDown}
-            label="Render PDF"
-            sub="Mall: offert_v3"
-            color="cyan"
-            x="59%"
-            y="58%"
-          />
-          <DiagramNode
-            icon={Mail}
-            label="Skicka för signatur"
-            sub="Zoho · 12s"
-            color="rose"
-            x="86%"
-            y="38%"
-            running
-          />
         </div>
       </div>
-    </div>
-  )
-}
-
-const COLORS: Record<
-  string,
-  { ring: string; icon: string; bg: string }
-> = {
-  amber: {
-    ring: 'border-amber-400/40',
-    icon: 'text-amber-400',
-    bg: 'bg-amber-500/10',
-  },
-  blue: {
-    ring: 'border-blue-400/40',
-    icon: 'text-blue-400',
-    bg: 'bg-blue-500/10',
-  },
-  violet: {
-    ring: 'border-violet-400/40',
-    icon: 'text-violet-400',
-    bg: 'bg-violet-500/10',
-  },
-  cyan: {
-    ring: 'border-cyan-400/40',
-    icon: 'text-cyan-400',
-    bg: 'bg-cyan-500/10',
-  },
-  rose: {
-    ring: 'border-rose-400/40',
-    icon: 'text-rose-400',
-    bg: 'bg-rose-500/10',
-  },
-}
-
-function DiagramNode({
-  icon: Icon,
-  label,
-  sub,
-  color,
-  x,
-  y,
-  running,
-}: {
-  icon: typeof Zap
-  label: string
-  sub: string
-  color: keyof typeof COLORS
-  x: string
-  y: string
-  running?: boolean
-}) {
-  const c = COLORS[color]
-  return (
-    <div
-      className={`pointer-events-auto absolute flex w-[160px] -translate-x-0 flex-col rounded-lg border bg-elevated p-2.5 shadow-lg ${c.ring}`}
-      style={{ left: x, top: y }}
-    >
-      <div className="flex items-center gap-2">
-        <div
-          className={`flex size-6 items-center justify-center rounded-md ${c.bg} ${c.icon}`}
-        >
-          <Icon size={13} strokeWidth={1.75} />
-        </div>
-        <span className="flex-1 truncate text-[11px] font-medium text-fg">
-          {label}
-        </span>
-        {running ? (
-          <span className="size-1.5 animate-pulse rounded-full bg-amber-400" />
-        ) : (
-          <CheckCircle2 size={11} className="text-emerald-400" />
-        )}
-      </div>
-      <p className="mt-1 truncate font-mono text-[9px] text-subtle">{sub}</p>
     </div>
   )
 }
