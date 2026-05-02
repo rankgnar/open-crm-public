@@ -41,51 +41,75 @@ export function ModulesTeaser() {
           </p>
         </header>
 
-        {/* Pipeline — vertical compact stepper on mobile, horizontal track on md+ */}
-        <div className="relative mx-auto mt-10 max-w-4xl md:mt-14">
-          {/* Desktop horizontal track */}
-          <div
-            aria-hidden
-            className="absolute left-[8.33%] right-[8.33%] top-7 hidden h-px bg-gradient-to-r from-accent/0 via-accent/60 to-accent/0 md:block"
-          />
-          {/* Mobile vertical track — solid, aligned to circle center (44/2 = 22 from left) */}
-          <div
-            aria-hidden
-            className="absolute bottom-[22px] left-[22px] top-[22px] w-px bg-accent/30 md:hidden"
-          />
+        {/* Pipeline — vertical centered stepper on mobile, horizontal on md+ */}
+        <div className="mt-10 md:mt-14">
+          {/* Mobile: vertical stepper, narrow centered column */}
+          <div className="relative mx-auto max-w-[240px] md:hidden">
+            {/* Vertical track — solid, aligned to circle center (44/2 = 22 from left) */}
+            <div
+              aria-hidden
+              className="absolute bottom-[22px] left-[22px] top-[22px] w-px bg-accent/30"
+            />
+            <ol className="relative flex flex-col gap-3">
+              {STAGES.map((s, i) => {
+                const Icon = s.icon
+                return (
+                  <li key={s.key} className="flex items-center gap-3">
+                    <div className="relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-bg-elevated shadow-[0_0_18px_-4px_rgba(52,211,153,0.45)]">
+                      <Icon
+                        size={16}
+                        strokeWidth={1.75}
+                        className="text-accent-soft"
+                      />
+                    </div>
+                    <div className="flex items-baseline gap-2">
+                      <span className="font-mono text-[10px] uppercase tracking-widest text-subtle">
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span className="text-sm font-medium text-fg">
+                        {tMod(`${s.i18nKey}.title`)}
+                      </span>
+                    </div>
+                  </li>
+                )
+              })}
+            </ol>
+          </div>
 
-          <ol className="relative flex flex-col gap-2 md:grid md:grid-cols-6 md:gap-2">
-            {STAGES.map((s, i) => {
-              const Icon = s.icon
-              return (
-                <li
-                  key={s.key}
-                  className="flex items-center gap-3 md:flex-col md:gap-3 md:text-center"
-                >
-                  <div className="relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-bg-elevated shadow-[0_0_18px_-4px_rgba(52,211,153,0.45)] md:h-14 md:w-14">
-                    <Icon
-                      size={16}
-                      strokeWidth={1.75}
-                      className="text-accent-soft md:hidden"
-                    />
-                    <Icon
-                      size={20}
-                      strokeWidth={1.75}
-                      className="hidden text-accent-soft md:block"
-                    />
-                  </div>
-                  <div className="flex items-baseline gap-2 md:flex-col md:items-center md:gap-0 md:text-center">
-                    <span className="font-mono text-[10px] uppercase tracking-widest text-subtle">
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
-                    <span className="text-sm font-medium text-fg md:mt-1 md:text-sm">
-                      {tMod(`${s.i18nKey}.title`)}
-                    </span>
-                  </div>
-                </li>
-              )
-            })}
-          </ol>
+          {/* Desktop: horizontal track + 6-column grid */}
+          <div className="relative mx-auto hidden max-w-4xl md:block">
+            <div
+              aria-hidden
+              className="absolute left-[8.33%] right-[8.33%] top-7 h-px bg-gradient-to-r from-accent/0 via-accent/60 to-accent/0"
+            />
+            <ol className="relative grid grid-cols-6 gap-2">
+              {STAGES.map((s, i) => {
+                const Icon = s.icon
+                return (
+                  <li
+                    key={s.key}
+                    className="flex flex-col items-center gap-3 text-center"
+                  >
+                    <div className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-bg-elevated shadow-[0_0_18px_-4px_rgba(52,211,153,0.45)]">
+                      <Icon
+                        size={20}
+                        strokeWidth={1.75}
+                        className="text-accent-soft"
+                      />
+                    </div>
+                    <div className="flex flex-col items-center text-center">
+                      <span className="font-mono text-[10px] uppercase tracking-widest text-subtle">
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span className="mt-1 text-sm font-medium text-fg">
+                        {tMod(`${s.i18nKey}.title`)}
+                      </span>
+                    </div>
+                  </li>
+                )
+              })}
+            </ol>
+          </div>
         </div>
 
         <div className="mt-10 flex justify-center md:mt-14">

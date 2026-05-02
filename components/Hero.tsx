@@ -77,7 +77,7 @@ export function Hero() {
 
             {/* CTAs */}
             <div
-              className="mt-5 flex flex-col gap-2.5 animate-fade-up sm:flex-row sm:flex-wrap sm:items-center md:mt-7 md:gap-3"
+              className="mt-5 flex max-w-xs flex-col gap-2.5 animate-fade-up sm:max-w-none sm:flex-row sm:flex-wrap sm:items-center md:mt-7 md:gap-3"
               style={{ animationDelay: '240ms' }}
             >
               <Link href="/tjanster" className="btn btn-primary w-full !h-10 !text-sm sm:w-auto md:!h-11 md:!text-base">
@@ -96,12 +96,12 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right: live product frame — full UI, scaled to fit on mobile */}
+          {/* Right: live product frame — full natural workspace, scales down on narrow viewports */}
           <div
             className="animate-fade-up lg:col-span-6"
             style={{ animationDelay: '300ms' }}
           >
-            <ProductFrame active="workspace" height={460} naturalWidth={640}>
+            <ProductFrame active="workspace">
               <WorkspaceView />
             </ProductFrame>
           </div>
