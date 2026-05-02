@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl'
 import { ProductFrame, type ActiveSection } from './preview/ProductFrame'
+import { WorkspaceView } from './preview/views/WorkspaceView'
 import { KunderView } from './preview/views/KunderView'
 import { ProjektView } from './preview/views/ProjektView'
 import { KalenderView } from './preview/views/KalenderView'
@@ -7,28 +8,35 @@ import { ForslagView } from './preview/views/ForslagView'
 import { WorkflowsView } from './preview/views/WorkflowsView'
 import { PersonalView } from './preview/views/PersonalView'
 import { EkonomiView } from './preview/views/EkonomiView'
+import { EpostView } from './preview/views/EpostView'
 import { ChatView } from './preview/views/ChatView'
+
+type StackTabKey =
+  | 'workspace'
+  | 'kunder'
+  | 'projekt'
+  | 'forslag'
+  | 'workflows'
+  | 'kalender'
+  | 'ekonomi'
+  | 'personal'
+  | 'epost'
+  | 'chat'
 
 const VIEWS: Array<{
   active: ActiveSection
-  tabKey:
-    | 'kunder'
-    | 'projekt'
-    | 'forslag'
-    | 'workflows'
-    | 'kalender'
-    | 'ekonomi'
-    | 'personal'
-    | 'chat'
+  tabKey: StackTabKey
   Component: React.ComponentType
 }> = [
+  { active: 'workspace', tabKey: 'workspace', Component: WorkspaceView },
   { active: 'kunder', tabKey: 'kunder', Component: KunderView },
   { active: 'projekt', tabKey: 'projekt', Component: ProjektView },
   { active: 'forslag', tabKey: 'forslag', Component: ForslagView },
-  { active: 'workflows', tabKey: 'workflows', Component: WorkflowsView },
   { active: 'kalender', tabKey: 'kalender', Component: KalenderView },
+  { active: 'workflows', tabKey: 'workflows', Component: WorkflowsView },
   { active: 'ekonomi', tabKey: 'ekonomi', Component: EkonomiView },
   { active: 'personal', tabKey: 'personal', Component: PersonalView },
+  { active: 'epost', tabKey: 'epost', Component: EpostView },
   { active: 'chat', tabKey: 'chat', Component: ChatView },
 ]
 

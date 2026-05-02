@@ -78,6 +78,7 @@
       "kalender": "Calendario",
       "ekonomi": "Economía",
       "personal": "Personal",
+      "epost": "Email",
       "chat": "Chat"
     },
     "frame": {
@@ -92,6 +93,7 @@
       "sub": "Desplázate hacia abajo. Cada vista es uno de los módulos de open-crm — código real, datos ficticios, mismo aspecto que la app final."
     },
     "viewDescriptions": {
+      "workspace": "Pantalla de inicio. Resumen de proyectos activos, costes, facturación y tareas del día.",
       "kunder": "Empresas, personas, contactos. Con historial, notas y estado.",
       "projekt": "Detalle de proyecto. Flujo de estado, cliente, deducción ROT, actividad.",
       "forslag": "Presupuesto con fases, mano de obra, materiales, deducción ROT y totales.",
@@ -99,6 +101,7 @@
       "kalender": "Calendario con tareas, visitas, entregas y reuniones — agenda del equipo.",
       "ekonomi": "Coste frente a presupuesto por proyecto. Margen, facturado y pendiente.",
       "personal": "Empleados, estado, partes de horas a aprobar y solicitudes de vacaciones.",
+      "epost": "Bandeja vinculada a cliente y proyecto. Hilos, etiquetas y búsqueda.",
       "chat": "Comunicación interna ligada a equipos y proyectos."
     }
   },

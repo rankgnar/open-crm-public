@@ -78,6 +78,7 @@
       "kalender": "Kalender",
       "ekonomi": "Ekonomi",
       "personal": "Personal",
+      "epost": "E-post",
       "chat": "Chat"
     },
     "frame": {
@@ -92,6 +93,7 @@
       "sub": "Bläddra ner. Varje vy är ett av modulerna i open-crm — riktig kod, fiktiv data, samma utseende som i den färdiga appen."
     },
     "viewDescriptions": {
+      "workspace": "Startsidan. Översikt över aktiva projekt, kostnader, fakturering och dagens uppgifter.",
       "kunder": "Företag, personer, kontaktpunkter. Med historik, anteckningar och status.",
       "projekt": "Detaljvy för ett projekt. Statusflöde, kund, ROT-avdrag, aktivitet.",
       "forslag": "Offert med faser, arbete, material, ROT-avdrag och totalsummering.",
@@ -99,6 +101,7 @@
       "kalender": "Schema med uppgifter, besök, leveranser och möten — hela teamets kalender.",
       "ekonomi": "Kostnad mot budget per projekt. Marginal, fakturerat och utestående.",
       "personal": "Anställda, status, tidrapporter att godkänna och ledighetsansökningar.",
+      "epost": "Inkorg kopplad till kund och projekt. Trådar, etiketter och sökning.",
       "chat": "Intern kommunikation kopplad till team och projekt."
     }
   },

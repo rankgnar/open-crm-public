@@ -11,6 +11,7 @@ import {
   TrendingUp,
   Receipt,
   UserCog,
+  Mail,
   MessageSquare,
   Settings,
   PanelLeft,
@@ -28,6 +29,7 @@ export type ActiveSection =
   | 'ekonomi'
   | 'personal'
   | 'workflows'
+  | 'epost'
   | 'chat'
 
 type TabKey =
@@ -39,6 +41,7 @@ type TabKey =
   | 'ekonomi'
   | 'personal'
   | 'workflows'
+  | 'epost'
   | 'chat'
 type FrameKey = 'arbete' | 'fakturor' | 'tema' | 'installningar'
 
@@ -58,6 +61,7 @@ type AlsoItem =
 
 const NAV_ALSO: AlsoItem[] = [
   { key: 'workflows', icon: Workflow, tabKey: 'workflows' },
+  { key: 'epost', icon: Mail, tabKey: 'epost' },
   { key: 'chat', icon: MessageSquare, tabKey: 'chat' },
   { key: null, icon: HardHat, frameKey: 'arbete' },
   { key: null, icon: Receipt, frameKey: 'fakturor' },

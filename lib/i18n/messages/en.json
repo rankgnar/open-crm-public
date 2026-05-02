@@ -78,6 +78,7 @@
       "kalender": "Calendar",
       "ekonomi": "Finance",
       "personal": "Staff",
+      "epost": "Email",
       "chat": "Chat"
     },
     "frame": {
@@ -92,6 +93,7 @@
       "sub": "Scroll down. Each view is one of open-crm's modules — real code, fixture data, same look as the shipped app."
     },
     "viewDescriptions": {
+      "workspace": "Home screen. Overview of active projects, costs, invoicing and today's tasks.",
       "kunder": "Companies, people, contact points. With history, notes and status.",
       "projekt": "Project detail view. Status flow, customer, ROT deduction, activity.",
       "forslag": "Quote with phases, labor, materials, ROT deduction and totals.",
@@ -99,6 +101,7 @@
       "kalender": "Schedule with tasks, visits, deliveries and meetings — the team calendar.",
       "ekonomi": "Cost vs budget per project. Margin, invoiced and outstanding.",
       "personal": "Staff, status, time reports to approve and time-off requests.",
+      "epost": "Inbox linked to customer and project. Threads, labels and search.",
       "chat": "Internal communication linked to teams and projects."
     }
   },
