@@ -186,8 +186,7 @@
     "label": "Philosophy",
     "title": "Stop renting. Start owning.",
     "p1": "The industry sells subscriptions that hold your data hostage. The day you stop paying, everything disappears — contacts, projects, invoices, quotes, mail history.",
-    "p2": "open-crm is different. Source code is public under MIT. The database is yours. The server is yours. If we shut down tomorrow, you can keep running the system for ten more years — without us.",
-    "p3": "We charge for value. Not for jail."
+    "p2": "open-crm is different. Source code is public under MIT. The database is yours. The server is yours. If we shut down tomorrow, you can keep running the system for ten more years — without us."
   },
   "services": {
     "label": "Services",

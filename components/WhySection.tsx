@@ -35,14 +35,6 @@ export function WhySection() {
               />
               <span>{t('p2')}</span>
             </p>
-            <p className="flex gap-4">
-              <Heart
-                size={18}
-                className="mt-1.5 shrink-0 text-accent-soft"
-                strokeWidth={1.75}
-              />
-              <span className="font-medium text-fg">{t('p3')}</span>
-            </p>
           </div>
         </div>
       </div>

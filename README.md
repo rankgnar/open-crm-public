@@ -10,25 +10,61 @@ no third-party data sharing.
 
 ---
 
-## What's inside the product
+## See it in action
 
-OpenCRM bundles 10 modules covering the full flow from first contact to
-paid invoice. Each one is a real, working view in the desktop app.
+Each module below is a real React view from the desktop app, rendered with
+fixture data. Live demo with all 10 modules:
+[open-crm.org/sv/produkten](https://open-crm.org/sv/produkten).
 
-| Module        | What it does                                                                |
-| ------------- | --------------------------------------------------------------------------- |
-| **Workspace** | Home screen. Active projects, costs, invoicing and today's tasks.           |
-| **Kunder**    | Companies, people and contact points with history, notes and status.        |
-| **Projekt**   | Project detail with status flow, customer, ROT deduction and activity feed. |
-| **Förslag**   | Quote with phases, labor, materials, ROT deduction and totals.              |
-| **Kalender**  | Schedule with tasks, visits, deliveries and meetings — the team calendar.   |
-| **Workflows** | Visual node editor: trigger → context → AI → action. Git-versioned.         |
-| **Ekonomi**   | Cost vs budget per project. Margin, invoiced and outstanding.               |
-| **Personal** | Staff, status, time reports to approve and time-off requests.               |
-| **E-post**    | Inbox linked to customer and project. Threads, labels and search.           |
-| **Chat**      | Internal communication linked to teams and projects.                        |
+### Workspace
+Home screen. Active projects, costs, invoicing and today's tasks.
 
-See every module live at [open-crm.org/sv/produkten](https://open-crm.org/sv/produkten).
+![Workspace](./public/screenshots/workspace.png)
+
+### Kunder — Customers
+Companies, people and contact points. With history, notes and status.
+
+![Kunder](./public/screenshots/kunder.png)
+
+### Projekt — Projects
+Detail view. Status flow, customer, ROT deduction and activity feed.
+
+![Projekt](./public/screenshots/projekt.png)
+
+### Förslag — Quotes
+Quote with phases, labor, materials, ROT deduction and totals.
+
+![Förslag](./public/screenshots/forslag.png)
+
+### Kalender — Calendar
+Schedule with tasks, visits, deliveries and meetings — the team calendar.
+
+![Kalender](./public/screenshots/kalender.png)
+
+### Workflows
+Visual node editor: trigger → context → AI → action. Git-versioned.
+
+![Workflows](./public/screenshots/workflows.png)
+
+### Ekonomi — Finance
+Cost vs budget per project. Margin, invoiced and outstanding.
+
+![Ekonomi](./public/screenshots/ekonomi.png)
+
+### Personal — Staff
+Staff, status, time reports to approve and time-off requests.
+
+![Personal](./public/screenshots/personal.png)
+
+### E-post — Email
+Inbox linked to customer and project. Threads, labels and search.
+
+![E-post](./public/screenshots/epost.png)
+
+### Chat
+Internal communication linked to teams and projects.
+
+![Chat](./public/screenshots/chat.png)
 
 ---
 
@@ -44,8 +80,8 @@ the product. Built with:
 - **next-intl** for SV / EN / ES localisation
 - **TypeScript 5**
 
-The CRM application itself is a separate Electron desktop app and is
-not part of this repository.
+The CRM application itself is a separate Electron desktop app and is not
+part of this repository.
 
 ---
 
@@ -66,6 +102,16 @@ Open [http://localhost:3030](http://localhost:3030).
 npm run build
 npm start
 ```
+
+### Refresh the README screenshots
+
+```bash
+node scripts/screenshots.mjs
+```
+
+Captures all 10 product previews from the live deployment and writes them
+to `public/screenshots/`. Set `BASE_URL=http://localhost:3030` to point
+at a local dev server instead.
 
 ---
 

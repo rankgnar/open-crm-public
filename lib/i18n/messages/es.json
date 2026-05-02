@@ -186,8 +186,7 @@
     "label": "Filosofía",
     "title": "Deja de alquilar. Empieza a poseer.",
     "p1": "El sector vende suscripciones que retienen tus datos como rehén. El día que dejas de pagar, todo desaparece — contactos, proyectos, facturas, presupuestos, historial de correo.",
-    "p2": "open-crm es distinto. El código es público bajo MIT. La base de datos es tuya. El servidor es tuyo. Si mañana cerramos, puedes seguir usando el sistema diez años más — sin nosotros.",
-    "p3": "Cobramos por el valor. No por la cárcel."
+    "p2": "open-crm es distinto. El código es público bajo MIT. La base de datos es tuya. El servidor es tuyo. Si mañana cerramos, puedes seguir usando el sistema diez años más — sin nosotros."
   },
   "services": {
     "label": "Servicios",

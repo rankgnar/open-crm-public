@@ -186,8 +186,7 @@
     "label": "Filosofi",
     "title": "Sluta hyra. Börja äga.",
     "p1": "Branschen säljer prenumerationer som tar din data som gisslan. När du slutar betala försvinner allt — kontakter, projekt, fakturor, offerter, mejlhistorik.",
-    "p2": "open-crm är annorlunda. Källkoden är publik under MIT-licens. Databasen är din. Servern är din. Om vi imorgon slutar leverera kan du fortsätta köra systemet i tio år till — utan oss.",
-    "p3": "Vi tar betalt för värde. Inte för fängelse."
+    "p2": "open-crm är annorlunda. Källkoden är publik under MIT-licens. Databasen är din. Servern är din. Om vi imorgon slutar leverera kan du fortsätta köra systemet i tio år till — utan oss."
   },
   "services": {
     "label": "Tjänster",
