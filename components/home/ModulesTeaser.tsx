@@ -1,22 +1,27 @@
 import {
   Users,
   FolderKanban,
+  FileText,
   CalendarDays,
   TrendingUp,
+  Receipt,
   ArrowRight,
   type LucideIcon,
 } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/lib/i18n/navigation'
 
-const ITEMS: Array<{
-  modKey: 'kunder' | 'projekt' | 'schema' | 'ekonomi'
+const STAGES: Array<{
+  key: string
   icon: LucideIcon
+  i18nKey: 'kunder' | 'projekt' | 'offert' | 'schema' | 'ekonomi' | 'fakturor'
 }> = [
-  { modKey: 'kunder', icon: Users },
-  { modKey: 'projekt', icon: FolderKanban },
-  { modKey: 'schema', icon: CalendarDays },
-  { modKey: 'ekonomi', icon: TrendingUp },
+  { key: 'kunder', icon: Users, i18nKey: 'kunder' },
+  { key: 'projekt', icon: FolderKanban, i18nKey: 'projekt' },
+  { key: 'forslag', icon: FileText, i18nKey: 'offert' },
+  { key: 'kalender', icon: CalendarDays, i18nKey: 'schema' },
+  { key: 'ekonomi', icon: TrendingUp, i18nKey: 'ekonomi' },
+  { key: 'fakturor', icon: Receipt, i18nKey: 'fakturor' },
 ]
 
 export function ModulesTeaser() {
@@ -36,26 +41,49 @@ export function ModulesTeaser() {
           </p>
         </header>
 
-        <div className="mt-12 grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4 lg:grid-cols-4">
-          {ITEMS.map(({ modKey, icon: Icon }) => (
-            <div
-              key={modKey}
-              className="card group relative flex h-full flex-col p-5 md:p-6"
-            >
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg border border-border-strong bg-surface text-accent-soft transition group-hover:border-accent/40 group-hover:bg-accent/5">
-                <Icon size={18} strokeWidth={1.75} />
-              </div>
-              <h3 className="text-base font-semibold text-fg-strong">
-                {tMod(`${modKey}.title`)}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                {tMod(`${modKey}.desc`)}
-              </p>
-            </div>
-          ))}
+        {/* Pipeline — horizontal on md+, vertical on mobile */}
+        <div className="relative mx-auto mt-14 max-w-4xl">
+          {/* Desktop track (between station centers, behind icons) */}
+          <div
+            aria-hidden
+            className="absolute left-[8.33%] right-[8.33%] top-7 hidden h-px bg-gradient-to-r from-accent/0 via-accent/60 to-accent/0 md:block"
+          />
+          {/* Mobile track (vertical, left side) */}
+          <div
+            aria-hidden
+            className="absolute bottom-7 left-7 top-7 w-px bg-gradient-to-b from-accent/0 via-accent/60 to-accent/0 md:hidden"
+          />
+
+          <ol className="relative flex flex-col gap-3 md:grid md:grid-cols-6 md:gap-2">
+            {STAGES.map((s, i) => {
+              const Icon = s.icon
+              return (
+                <li
+                  key={s.key}
+                  className="flex items-center gap-4 md:flex-col md:gap-3 md:text-center"
+                >
+                  <div className="group relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-bg-elevated shadow-[0_0_24px_-4px_rgba(52,211,153,0.45)] transition-all hover:border-accent/70 hover:shadow-[0_0_32px_-4px_rgba(52,211,153,0.6)]">
+                    <Icon
+                      size={20}
+                      strokeWidth={1.75}
+                      className="text-accent-soft"
+                    />
+                  </div>
+                  <div className="md:text-center">
+                    <p className="font-mono text-[10px] uppercase tracking-widest text-subtle">
+                      {String(i + 1).padStart(2, '0')}
+                    </p>
+                    <p className="mt-0.5 text-sm font-medium text-fg md:mt-1">
+                      {tMod(`${s.i18nKey}.title`)}
+                    </p>
+                  </div>
+                </li>
+              )
+            })}
+          </ol>
         </div>
 
-        <div className="mt-10 flex justify-center">
+        <div className="mt-14 flex justify-center">
           <Link href="/produkten" className="btn btn-ghost !h-10 !text-sm">
             {tHome('cta')}
             <ArrowRight size={15} />
